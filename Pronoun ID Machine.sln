@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronoun ID Machine", "Pronoun ID Machine.csproj", "{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{A37F9D2E-05F7-45E5-94ED-D95C2CA2DAD4}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
