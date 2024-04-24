@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Frame.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/HairBack.tscn" type="PackedScene" id=2]
@@ -6,14 +6,12 @@
 [ext_resource path="res://Scenes/HairFront.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Nose.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Ears.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/WiderHead.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Torso.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Mouth.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Hoodie.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Eyebrows.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/DiamondHead.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/SquareHead.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/HeadMenu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/main.gd" type="Script" id=16]
 [ext_resource path="res://images/Hair Front 1.png" type="Texture" id=17]
@@ -22,6 +20,7 @@
 [ext_resource path="res://images/Eyebrows 1.png" type="Texture" id=20]
 [ext_resource path="res://images/Hair Back 1.png" type="Texture" id=21]
 [ext_resource path="res://images/Mouth 1.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/MouthMenu.tscn" type="PackedScene" id=24]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 16 )
@@ -29,14 +28,20 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Avatar Rectangle" type="ReferenceRect" parent="."]
-margin_left = 23.0
-margin_top = 119.0
-margin_right = 336.0
-margin_bottom = 613.0
-border_color = Color( 1, 0, 0, 0 )
+[node name="Background Color" type="ColorRect" parent="."]
+margin_right = 783.0
+margin_bottom = 774.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
 
-[node name="Avatar Image" type="Node" parent="."]
+[node name="Avatar Image" type="Node2D" parent="."]
+
+[node name="Avatar Rectangle" type="ReferenceRect" parent="Avatar Image"]
+margin_left = 24.0
+margin_top = 165.0
+margin_right = 337.0
+margin_bottom = 588.0
+border_color = Color( 1, 0, 0, 0 )
 
 [node name="Background" parent="Avatar Image" instance=ExtResource( 8 )]
 
@@ -49,21 +54,10 @@ texture = ExtResource( 21 )
 
 [node name="Torso" parent="Avatar Image" instance=ExtResource( 9 )]
 
-[node name="Heads" type="Node2D" parent="Avatar Image"]
-
-[node name="Diamond Head" parent="Avatar Image/Heads" instance=ExtResource( 13 )]
-
-[node name="Square Head" parent="Avatar Image/Heads" instance=ExtResource( 14 )]
-visible = false
-
-[node name="Wider Head" parent="Avatar Image/Heads" instance=ExtResource( 7 )]
-visible = false
+[node name="Head" parent="Avatar Image" instance=ExtResource( 13 )]
 
 [node name="Nose" parent="Avatar Image" instance=ExtResource( 5 )]
 texture = ExtResource( 18 )
-
-[node name="Mouth" parent="Avatar Image" instance=ExtResource( 10 )]
-texture = ExtResource( 22 )
 
 [node name="Eyes" parent="Avatar Image" instance=ExtResource( 3 )]
 texture = ExtResource( 19 )
@@ -76,4 +70,9 @@ texture = ExtResource( 17 )
 
 [node name="Hoodie" parent="Avatar Image" instance=ExtResource( 11 )]
 
+[node name="Mouth" parent="Avatar Image" instance=ExtResource( 10 )]
+texture = ExtResource( 22 )
+
 [node name="Head Menu" parent="." instance=ExtResource( 15 )]
+
+[node name="Mouth Menu" parent="." instance=ExtResource( 24 )]
