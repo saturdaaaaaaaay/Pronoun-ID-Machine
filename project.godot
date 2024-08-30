@@ -16,10 +16,9 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/width=768
-window/size/height=768
-window/per_pixel_transparency/allowed=true
-window/per_pixel_transparency/enabled=true
+window/size/width=960
+window/size/height=540
+window/size/resizable=false
 
 [gui]
 

@@ -2,59 +2,59 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-# var a = 2
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().get_root().set_transparent_background(true)
-	get_node("Head Menu/Color Squares/Color Square 1").connect("item_clicked", self, "_switch_color")
-	get_node("Head Menu/Color Squares/Color Square 2").connect("item_clicked", self, "_switch_color")
-	get_node("Head Menu/Color Squares/Color Square 3").connect("item_clicked", self, "_switch_color")
+	get_node("Title Page/Continue Button").connect(
+		"item_clicked", self, "show_character_customization"
+	)
+	get_node("Character Customization/Continue Button").connect(
+		"item_clicked", self, "show_confirm_complete"
+	)
+	get_node("Character Complete Confirmation/Nah Button").connect(
+		"item_clicked", self, "hide_confirm_complete"
+	)
+	get_node("Character Complete Confirmation/Yep Button").connect(
+		"item_clicked", self, "show_id_customization"
+	)
+	get_node("ID Customization/Donezo Button").connect(
+		"item_clicked", self, "show_ID_confirm_complete"
+	)
+	get_node("ID Complete Confirmation/Hmm Button").connect(
+		"item_clicked", self, "hide_ID_confirm_complete"
+	)
+	get_node("ID Complete Confirmation/Yeah Button").connect(
+		"item_clicked", self, "show_final_page"
+	)
 	
-	get_node("Head Menu/Head Options/Diamond Head Option").connect("item_clicked", self, "_switch_head")
-	get_node("Head Menu/Head Options/Square Head Option").connect("item_clicked", self, "_switch_head")
-	get_node("Head Menu/Head Options/Wider Head Option").connect("item_clicked", self, "_switch_head")
+func show_character_customization(path):
+	get_node("Title Page").hide()
+	get_node("Character Customization").show()
 	
-	get_node("Mouth Menu/Mouth Options/Mouth Option 1").connect("item_clicked", self, "_switch_mouth")
-	get_node("Mouth Menu/Mouth Options/Mouth Option 2").connect("item_clicked", self, "_switch_mouth")
+func show_confirm_complete(path):
+	get_node("Character Complete Confirmation").show()
 	
-	get_node("Head Menu/Color Squares/Download").connect("item_clicked", self, "_download_file")
+func hide_confirm_complete(path):
+	get_node("Character Complete Confirmation").hide()
 	
-func _switch_color(path):
-	var color = get_node(path).get_self_modulate()
+func show_id_customization(path):
+	var new_texture = get_node("Character Customization/Viewport").get_texture()
+	get_node("Character Complete Confirmation").hide()
+	get_node("Character Customization").hide()
+	get_node("ID Customization").show()
+	get_node("ID Customization/ID Badge/Photo").set_texture(new_texture)
 	
-	get_node("Avatar Image/Head").set_self_modulate(color)
-	get_node("Avatar Image/Ears").set_self_modulate(color)
-	get_node("Avatar Image/Torso").set_self_modulate(color)
+func show_ID_confirm_complete(path):
+	get_node("ID Complete Confirmation").show()
 	
-func _switch_head(path):
-	var texture = get_node(path).texture
-	get_node("Avatar Image/Head").texture = texture
-		
-func _switch_mouth(path):
-	var texture = get_node(path).texture
-	get_node("Avatar Image/Mouth").texture = texture
+func hide_ID_confirm_complete(path):
+	get_node("ID Complete Confirmation").hide()
 	
-func _get_skin_features():
-	for child in get_children():
-		print(child)
-		print( child.is_class("Skin Feature"))
-		
-func _download_file(path):
-	get_node("Background Color").hide()
-	
-	var position = get_node("Avatar Image/Avatar Rectangle").rect_position
-	var size = get_node("Avatar Image/Avatar Rectangle").rect_size
-	var rect_crop = Rect2(position, size)
-	yield(VisualServer, "frame_post_draw")
-	var img = self.get_viewport().get_texture().get_data().get_rect(rect_crop)
-	img.flip_y()
-	img.save_png("res://screenshot.png")
-	var buf = img.save_png_to_buffer()
-	JavaScript.download_buffer(buf,"screenshot"+".png")
-	
-	get_node("Background Color").show()
+func show_final_page(path):
+	get_node("ID Customization").hide()
+	get_node("ID Complete Confirmation").hide()
+	get_node("Final Page").show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
