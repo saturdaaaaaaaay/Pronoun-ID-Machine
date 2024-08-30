@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/MouthOption.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 3.png" type="Texture" id=3]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 2.png" type="Texture" id=4]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 7.png" type="Texture" id=5]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 5.png" type="Texture" id=6]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 4.png" type="Texture" id=7]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 8.png" type="Texture" id=8]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 6.png" type="Texture" id=9]
+
+[node name="Mouth Menu" type="Node2D"]
+
+[node name="Mouth 1 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( -150, -340 )
+
+[node name="Mouth 2 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( -50, -340 )
+texture = ExtResource( 4 )
+
+[node name="Mouth 3 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 50, -340 )
+texture = ExtResource( 3 )
+
+[node name="Mouth 4 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 150, -340 )
+texture = ExtResource( 7 )
+
+[node name="Mouth 5 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( -150, -250 )
+texture = ExtResource( 6 )
+
+[node name="Mouth 6 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( -50, -250 )
+texture = ExtResource( 9 )
+
+[node name="Mouth 7 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 50, -250 )
+texture = ExtResource( 5 )
+
+[node name="Mouth 8 Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 150, -250 )
+texture = ExtResource( 8 )

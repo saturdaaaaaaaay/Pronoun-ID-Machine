@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://images/Character Features/Mouths/Mouth 1.png" type="Texture" id=1]
+[ext_resource path="res://images/UI Elements/Option Tab.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI Elements/Item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI Elements/Scripts/ClickableItem.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50.5, 50.5 )
+
+[node name="Mouth Option Tab" instance=ExtResource( 3 )]
+self_modulate = Color( 0.956863, 0.396078, 0.141176, 1 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Icon" type="Sprite" parent="." index="0"]
+position = Vector2( -32, -353 )
+scale = Vector2( 0.474609, 0.474609 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 191.5, 79.5 )
+shape = SubResource( 1 )

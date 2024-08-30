@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/CharacterStage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/FaceMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/UI Elements/Character Customization Page.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI Elements/Menus/MenuManager.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/UI Elements/Menus/EyesMenu.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI Elements/Menus/NoseMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/UI Elements/Menus/MouthMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/UI Elements/Menus/EyebrowsMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI Elements/Menus/HairMenu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/UI Elements/Menus/ClothesMenu.tscn" type="PackedScene" id=10]
+
+[node name="Menu Manager" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Main Panel" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Character Stage" parent="." instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 82, -52 )
+
+[node name="Face Menu" parent="." instance=ExtResource( 2 )]
+position = Vector2( 400, 135 )
+
+[node name="Eyes Menu" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 400, 135 )
+
+[node name="Nose Menu" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 400, 135 )
+
+[node name="Mouth Menu" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 400, 135 )
+
+[node name="Eyebrows Menu" parent="." instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 400, 135 )
+
+[node name="Hair Menu" parent="." instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 400, 135 )
+
+[node name="Clothes Menu" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 400, 135 )

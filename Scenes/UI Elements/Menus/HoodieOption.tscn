@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ClickableItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Clothes/Hoodie.png" type="Texture" id=2]
+[ext_resource path="res://images/Character Features/Clothes/Hoodie Strings.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 368.571, 420.888 )
+
+[node name="Hoodie Option" instance=ExtResource( 1 )]
+position = Vector2( 0, -100 )
+scale = Vector2( 0.175, 0.175 )
+texture = ExtResource( 2 )
+
+[node name="Extra Clothes Component" type="Sprite" parent="." index="0"]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 488.571, 1001.97 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )

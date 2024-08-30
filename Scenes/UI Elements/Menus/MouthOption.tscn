@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ClickableItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Mouths/Mouth 1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 106.982, 96.3345 )
+
+[node name="Mouth Option" instance=ExtResource( 1 )]
+position = Vector2( -144, -334 )
+scale = Vector2( 0.421387, 0.421387 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 488.579, 913.599 )
+shape = SubResource( 1 )

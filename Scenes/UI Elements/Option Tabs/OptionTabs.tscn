@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/LeftArrow.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/UI Elements/Character Customization Page.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/EyebrowsOptionTab.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/HairOptionTab.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/ClothesOptionTab.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/NoseOptionTab.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/FaceOptionTab.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/MouthOptionTab.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/EyesOptionTab.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/UI Elements/RightArrow.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/OptionTabs.gd" type="Script" id=11]
+
+[node name="Option Tabs" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="Tabs" type="Node2D" parent="."]
+
+[node name="Face Option Tab" parent="Tabs" instance=ExtResource( 7 )]
+
+[node name="Eyes Option Tab" parent="Tabs" instance=ExtResource( 9 )]
+position = Vector2( 115, 0 )
+
+[node name="Nose Option Tab" parent="Tabs" instance=ExtResource( 6 )]
+position = Vector2( 230, 0 )
+
+[node name="Mouth Option Tab" parent="Tabs" instance=ExtResource( 8 )]
+position = Vector2( 345, 0 )
+
+[node name="Eyebrows Option Tab" parent="Tabs" instance=ExtResource( 3 )]
+position = Vector2( 460, 0 )
+
+[node name="Hair Option Tab" parent="Tabs" instance=ExtResource( 4 )]
+position = Vector2( 575, 0 )
+
+[node name="Clothes Option Tab" parent="Tabs" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 690, 0 )
+
+[node name="Main Panel" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Left Arrow" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 1, 1 )
+
+[node name="Right Arrow" parent="." instance=ExtResource( 10 )]
+scale = Vector2( 1, 1 )

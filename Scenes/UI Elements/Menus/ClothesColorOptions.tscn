@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ColorSquare.tscn" type="PackedScene" id=1]
+
+[node name="Clothes Color Options" type="Node2D"]
+
+[node name="Color Squares" type="Node2D" parent="."]
+
+[node name="Color Square 1" parent="Color Squares" instance=ExtResource( 1 )]
+self_modulate = Color( 0.207843, 0.345098, 0.556863, 1 )
+
+[node name="Color Square 2" parent="Color Squares" instance=ExtResource( 1 )]
+self_modulate = Color( 0.658824, 0.32549, 0.662745, 1 )
+position = Vector2( 60, 0 )
+
+[node name="Color Square 3" parent="Color Squares" instance=ExtResource( 1 )]
+self_modulate = Color( 0.172549, 0.65098, 0.34902, 1 )
+position = Vector2( 120, 0 )

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/FeatureOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Faces/Round Square Face.png" type="Texture" id=2]
+[ext_resource path="res://images/Character Features/Faces/Square Face.png" type="Texture" id=3]
+[ext_resource path="res://images/Character Features/Faces/Oval Face.png" type="Texture" id=4]
+[ext_resource path="res://images/Character Features/Faces/Round Face.png" type="Texture" id=5]
+
+[node name="Face Options" type="Node2D"]
+
+[node name="Diamond Face Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( -25, -90 )
+
+[node name="Oval Face Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 75, -90 )
+texture = ExtResource( 4 )
+
+[node name="Round Face Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 175, -90 )
+texture = ExtResource( 5 )
+
+[node name="Round Square Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 275, -90 )
+texture = ExtResource( 2 )
+
+[node name="Square Option2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -25, 10 )
+texture = ExtResource( 3 )

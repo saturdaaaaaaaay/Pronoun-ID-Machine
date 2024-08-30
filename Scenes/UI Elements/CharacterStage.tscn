@@ -1,0 +1,49 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Faces/Diamond Face.png" type="Texture" id=2]
+[ext_resource path="res://images/Character Features/Clothes/T-Shirt.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Character Features/Ears.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Character Features/Mouth.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Character Features/Clothes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Character Features/Head.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Character Features/HairBack.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Character Features/Torso.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Character Features/Nose.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Character Features/Eyes.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Character Features/Eyebrows.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Character Features/HairFront.tscn" type="PackedScene" id=13]
+
+[node name="Character Stage" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+
+[node name="Features" type="Node2D" parent="."]
+
+[node name="Hair Back" parent="Features" instance=ExtResource( 8 )]
+
+[node name="Skin Features" type="Node2D" parent="Features"]
+
+[node name="Ears" parent="Features/Skin Features" instance=ExtResource( 4 )]
+
+[node name="Torso" parent="Features/Skin Features" instance=ExtResource( 9 )]
+
+[node name="Head" parent="Features/Skin Features" instance=ExtResource( 7 )]
+texture = ExtResource( 2 )
+
+[node name="Nose" parent="Features" instance=ExtResource( 10 )]
+
+[node name="Eyes" parent="Features" instance=ExtResource( 11 )]
+
+[node name="Mouth" parent="Features" instance=ExtResource( 5 )]
+
+[node name="Eyebrows" parent="Features" instance=ExtResource( 12 )]
+
+[node name="Hair Front" parent="Features" instance=ExtResource( 13 )]
+
+[node name="Clothes" parent="Features" instance=ExtResource( 6 )]
+texture = ExtResource( 3 )
+
+[node name="Extra Clothes" parent="Features" instance=ExtResource( 6 )]
+visible = false
+texture = ExtResource( 3 )

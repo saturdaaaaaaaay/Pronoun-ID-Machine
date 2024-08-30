@@ -1,0 +1,91 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/Old Menus/OldHeadMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/Old Menus/OldMouthMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/UI Elements/Badge Format.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Character Features/HairBack.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/UI Elements/Menus/Old Menus/OldEyesMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Character Features/Ears.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI Elements/Frame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Character Features/HairFront.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Character Features/Hoodie.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Character Features/Nose.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Character Features/Mouth.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Character Features/Eyebrows.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Character Features/DiamondHead.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/UI Elements/Background.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Character Features/Torso.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Character Features/Eyes.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/main_1.gd" type="Script" id=21]
+
+[node name="main_1" type="Node2D"]
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Background Color" type="ColorRect" parent="."]
+visible = false
+margin_right = 768.0
+margin_bottom = 768.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 131.0
+margin_right = 767.0
+margin_bottom = 571.0
+mouse_filter = 2
+color = Color( 0.956863, 0.396078, 0.141176, 1 )
+
+[node name="Avatar Image" type="Node2D" parent="."]
+
+[node name="Avatar Rectangle" type="ReferenceRect" parent="Avatar Image"]
+margin_right = 352.0
+margin_bottom = 767.0
+border_color = Color( 1, 0, 0, 0 )
+border_width = 0.0
+
+[node name="Background" parent="Avatar Image" instance=ExtResource( 18 )]
+
+[node name="Frame" parent="Avatar Image" instance=ExtResource( 9 )]
+
+[node name="Hair Back" parent="Avatar Image" instance=ExtResource( 6 )]
+
+[node name="Skin Features" type="Node2D" parent="Avatar Image"]
+
+[node name="Ears" parent="Avatar Image/Skin Features" instance=ExtResource( 8 )]
+
+[node name="Torso" parent="Avatar Image/Skin Features" instance=ExtResource( 19 )]
+
+[node name="Head" parent="Avatar Image/Skin Features" instance=ExtResource( 17 )]
+
+[node name="Nose" parent="Avatar Image" instance=ExtResource( 12 )]
+
+[node name="Eyes" parent="Avatar Image" instance=ExtResource( 20 )]
+
+[node name="Eyebrows" parent="Avatar Image" instance=ExtResource( 15 )]
+
+[node name="Hair Front" parent="Avatar Image" instance=ExtResource( 10 )]
+
+[node name="Hoodie" parent="Avatar Image" instance=ExtResource( 11 )]
+
+[node name="Mouth" parent="Avatar Image" instance=ExtResource( 13 )]
+
+[node name="Old Head Menu" parent="." instance=ExtResource( 1 )]
+
+[node name="Old Mouth Menu" parent="." instance=ExtResource( 2 )]
+
+[node name="Old Eyes Menu" parent="." instance=ExtResource( 7 )]
+
+[node name="Badge" type="Node2D" parent="."]
+visible = false
+
+[node name="Badge Format" type="Sprite" parent="Badge"]
+scale = Vector2( 0.37, 0.37 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Badge Photo" type="Sprite" parent="Badge"]
+position = Vector2( 211, 278 )
+centered = false

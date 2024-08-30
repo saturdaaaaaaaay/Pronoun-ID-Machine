@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/HoodieOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/T-ShirtOption.tscn" type="PackedScene" id=2]
+
+[node name="Clothes Options" type="Node2D"]
+
+[node name="T-Shirt Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 150, -100 )
+
+[node name="Hoodie Option" parent="." instance=ExtResource( 1 )]

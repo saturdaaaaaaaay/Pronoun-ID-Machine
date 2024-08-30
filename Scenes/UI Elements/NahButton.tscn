@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/UI Elements/Nah Button.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI Elements/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI Elements/Scripts/ClickableItem.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 74, 42 )
+
+[node name="Nah Button" instance=ExtResource( 2 )]
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 460, 366 )
+shape = SubResource( 1 )
