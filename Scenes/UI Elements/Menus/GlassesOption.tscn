@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ClickableItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Face Accessories/Glasses 1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 171.877, 100.061 )
+
+[node name="Glasses Option" instance=ExtResource( 1 )]
+position = Vector2( -96, -238 )
+scale = Vector2( 0.384766, 0.384766 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 493.037, 773.197 )
+shape = SubResource( 1 )

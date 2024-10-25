@@ -6,12 +6,6 @@
 
 [node name="Character Complete Confirmation" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_right = 963.0
-margin_bottom = 547.0
-color = Color( 1, 1, 1, 0 )
-
 [node name="Main Panel" type="Sprite" parent="."]
 position = Vector2( 145, -59 )
 texture = ExtResource( 1 )

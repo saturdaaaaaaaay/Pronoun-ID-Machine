@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/Item.tscn" type="PackedScene" id=1]
-[ext_resource path="res://images/UI Elements/Background.png" type="Texture" id=2]
+[ext_resource path="res://images/UI Elements/Backgrounds/White Background.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI Elements/Frame.tscn" type="PackedScene" id=3]
 
 [node name="Background" instance=ExtResource( 1 )]

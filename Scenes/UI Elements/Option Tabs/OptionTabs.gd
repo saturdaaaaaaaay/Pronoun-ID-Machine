@@ -15,6 +15,10 @@ var MOUTH_MENU = "Mouth Menu"
 var EYEBROWS_MENU = "Eyebrows Menu"
 var HAIR_MENU = "Hair Menu"
 var CLOTHES_MENU = "Clothes Menu"
+var HEAD_ACCESSORIES_MENU = "Head Accessories Menu"
+var GLASSES_MENU = "Glasses Menu"
+var FACE_ACCESSORIES_MENU = "Face Accessories Menu"
+var EARRINGS_MENU = "Earrings Menu"
 
 var active_tab = null
 
@@ -50,18 +54,23 @@ func set_tab_active(path):
 		emit_signal("tab_switched", HAIR_MENU)
 	if tab_name == "Clothes Option Tab":
 		emit_signal("tab_switched", CLOTHES_MENU)
+	if tab_name == "Head Accessories Option Tab":
+		emit_signal("tab_switched", HEAD_ACCESSORIES_MENU)
+	if tab_name == "Glasses Option Tab":
+		emit_signal("tab_switched", GLASSES_MENU)
+	if tab_name == "Face Accessories Option Tab":
+		emit_signal("tab_switched", FACE_ACCESSORIES_MENU)
+	if tab_name == "Earrings Option Tab":
+		emit_signal("tab_switched", EARRINGS_MENU)
 
 func move_left(path):
 	if get_node("Tabs").get_child(0).get_position().x == FAR_LEFT:
 		return
 	for child in get_node("Tabs").get_children():
 		child.translate(Vector2(INCREMENT, 0))
-		var position = child.get_position().x
-		if position < FAR_LEFT or position > FAR_RIGHT:
-			child.hide()
-		else:
-			child.show()
-		
+		toggle_visibility(child)
+			
+	update_arrows()
 	
 func move_right(path):
 	var tab_total = get_node("Tabs").get_child_count()
@@ -69,11 +78,29 @@ func move_right(path):
 		return
 	for child in get_node("Tabs").get_children():
 		child.translate(Vector2(-INCREMENT, 0))
-		var position = child.get_position().x
-		if position < FAR_LEFT or position > FAR_RIGHT:
-			child.hide()
-		else:
-			child.show()
+		toggle_visibility(child)
+		
+	update_arrows()
+
+func toggle_visibility(child):
+	var position = child.get_position().x
+	if position > FAR_RIGHT or position < FAR_LEFT:
+		child.hide()
+	else:
+		child.show()
+
+func update_arrows():
+	if get_node("Tabs").get_child(0).get_position().x == FAR_LEFT:
+		get_node("Left Arrow").set_self_modulate(Color(1, 1, 1, 0.392157))
+	else:
+		get_node("Left Arrow").set_self_modulate(Color(1, 1, 1, 1))
+		
+	var tab_total = get_node("Tabs").get_child_count()
+	if get_node("Tabs").get_child(tab_total-1).get_position().x == FAR_RIGHT:
+		get_node("Right Arrow").set_self_modulate(Color(1, 1, 1, 0.392157))
+	else:
+		get_node("Right Arrow").set_self_modulate(Color(1, 1, 1, 1))
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

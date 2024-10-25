@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/LeftArrow.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/UI Elements/Character Customization Page.png" type="Texture" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/EyesOptionTab.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/UI Elements/RightArrow.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/OptionTabs.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/HeadAccessoriesOptionTab.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/FaceAccessoriesOptionTab.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/GlassesOptionTab.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/UI Elements/Option Tabs/EarringsOptionTab.tscn" type="PackedScene" id=15]
 
 [node name="Option Tabs" type="Node2D"]
 script = ExtResource( 11 )
@@ -38,12 +42,29 @@ position = Vector2( 575, 0 )
 visible = false
 position = Vector2( 690, 0 )
 
+[node name="Head Accessories Option Tab" parent="Tabs" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 805, 0 )
+
+[node name="Glasses Option Tab" parent="Tabs" instance=ExtResource( 14 )]
+visible = false
+position = Vector2( 920, 0 )
+
+[node name="Face Accessories Option Tab" parent="Tabs" instance=ExtResource( 13 )]
+visible = false
+position = Vector2( 1035, 0 )
+
+[node name="Earrings Option Tab" parent="Tabs" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 1150, 0 )
+
 [node name="Main Panel" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Left Arrow" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 1, 0.392157 )
 scale = Vector2( 1, 1 )
 
 [node name="Right Arrow" parent="." instance=ExtResource( 10 )]

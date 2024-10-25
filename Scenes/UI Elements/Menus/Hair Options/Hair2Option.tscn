@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 231.081, 266.873 )
 
-[node name="Hair 1 Option" instance=ExtResource( 3 )]
+[node name="Hair 2 Option" instance=ExtResource( 3 )]
 position = Vector2( -25, -89 )
 scale = Vector2( 0.175, 0.175 )
 texture = ExtResource( 1 )

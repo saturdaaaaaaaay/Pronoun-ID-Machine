@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/Character Features/Head Accessories/Shrek Ears.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Character Features/Feature.tscn" type="PackedScene" id=2]
+
+[node name="Head Accessory" instance=ExtResource( 2 )]
+texture = ExtResource( 1 )

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/StickerOptions.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/DragSticker.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI Elements/Menus/StickerMenu.gd" type="Script" id=3]
+
+[node name="Sticker Menu" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Sticker Options" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 200 )
+
+[node name="Drag Sticker" parent="." instance=ExtResource( 2 )]
+visible = false

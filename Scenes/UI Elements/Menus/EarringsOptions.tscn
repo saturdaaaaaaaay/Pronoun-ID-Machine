@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ClearButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/EarringsOption.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/Character Features/Ear Accessories/Small Hoop Earrings.PNG" type="Texture" id=3]
+[ext_resource path="res://images/Character Features/Ear Accessories/Teardrop Earrings.PNG" type="Texture" id=4]
+[ext_resource path="res://images/Character Features/Ear Accessories/Ear Cuffs.PNG" type="Texture" id=5]
+[ext_resource path="res://images/Character Features/Ear Accessories/Dangly Star Earrings.PNG" type="Texture" id=6]
+[ext_resource path="res://images/Character Features/Ear Accessories/Dangly Moon Earrings.PNG" type="Texture" id=7]
+[ext_resource path="res://images/Character Features/Ear Accessories/Stud Earrings.PNG" type="Texture" id=8]
+[ext_resource path="res://images/Character Features/Ear Accessories/Heart Dangly Earrings.PNG" type="Texture" id=9]
+
+[node name="Earrings Options" type="Node2D"]
+
+[node name="Clear Button" parent="." instance=ExtResource( 1 )]
+position = Vector2( 60, 4 )
+
+[node name="Big Hoop Earrings Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, -290 )
+
+[node name="Stud Eearrings Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( -90, -200 )
+texture = ExtResource( 8 )
+
+[node name="Small Hoop Earrings Option" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, -200 )
+texture = ExtResource( 3 )
+
+[node name="Teardrop Earrings Option" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -90, -110 )
+texture = ExtResource( 4 )
+
+[node name="Ear Cuffs Earrings Option" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 100, -110 )
+texture = ExtResource( 5 )
+
+[node name="Dangly Star Earrings Option" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -90, -20 )
+texture = ExtResource( 6 )
+
+[node name="Dangly Moon Earrings Option" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -90, 70 )
+texture = ExtResource( 9 )
+
+[node name="Dangly Heart Earrings Option" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 100, -20 )
+texture = ExtResource( 7 )

@@ -11,4 +11,4 @@ __meta__ = {
 [node name="Hair Options" parent="." instance=ExtResource( 2 )]
 
 [node name="Hair Color Options" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 200 )
+position = Vector2( 0, 195 )

@@ -9,20 +9,20 @@
 [node name="Face Options" type="Node2D"]
 
 [node name="Diamond Face Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( -25, -90 )
+position = Vector2( -40, -100 )
 
 [node name="Oval Face Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 75, -90 )
+position = Vector2( 60, -100 )
 texture = ExtResource( 4 )
 
 [node name="Round Face Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 175, -90 )
+position = Vector2( 160, -100 )
 texture = ExtResource( 5 )
 
-[node name="Round Square Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 275, -90 )
+[node name="Round Square Face Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 260, -100 )
 texture = ExtResource( 2 )
 
-[node name="Square Option2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -25, 10 )
+[node name="Square Face Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( -40, 0 )
 texture = ExtResource( 3 )

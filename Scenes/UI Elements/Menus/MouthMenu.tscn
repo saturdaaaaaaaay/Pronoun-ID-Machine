@@ -19,6 +19,7 @@ position = Vector2( -50, -340 )
 texture = ExtResource( 4 )
 
 [node name="Mouth 3 Option" parent="." instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
 position = Vector2( 50, -340 )
 texture = ExtResource( 3 )
 
@@ -35,9 +36,11 @@ position = Vector2( -50, -250 )
 texture = ExtResource( 9 )
 
 [node name="Mouth 7 Option" parent="." instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
 position = Vector2( 50, -250 )
 texture = ExtResource( 5 )
 
 [node name="Mouth 8 Option" parent="." instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.607843, 0.607843, 1 )
 position = Vector2( 150, -250 )
 texture = ExtResource( 8 )
