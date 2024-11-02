@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/CharacterStage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI Elements/Menus/FaceMenu.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/UI Elements/UpArrow.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/UI Elements/Menus/EarringsMenu.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/UI Elements/Menus/FacialHairMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/UI Elements/Menus/Menu.gd" type="Script" id=18]
 
 [node name="Menu Manager" type="Node2D"]
 script = ExtResource( 4 )
@@ -30,63 +31,77 @@ centered = false
 visible = false
 position = Vector2( 82, -52 )
 
-[node name="Face Menu" parent="." instance=ExtResource( 2 )]
-position = Vector2( 400, 135 )
+[node name="Menus" type="Node2D" parent="."]
 
-[node name="Eyes Menu" parent="." instance=ExtResource( 5 )]
+[node name="Face Menu" parent="Menus" instance=ExtResource( 2 )]
+position = Vector2( 400, 135 )
+script = ExtResource( 18 )
+
+[node name="Eyes Menu" parent="Menus" instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Nose Menu" parent="." instance=ExtResource( 6 )]
+[node name="Nose Menu" parent="Menus" instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Mouth Menu" parent="." instance=ExtResource( 7 )]
+[node name="Mouth Menu" parent="Menus" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Eyebrows Menu" parent="." instance=ExtResource( 8 )]
+[node name="Eyebrows Menu" parent="Menus" instance=ExtResource( 8 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Hair Menu" parent="." instance=ExtResource( 9 )]
+[node name="Hair Menu" parent="Menus" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Up Arrow" parent="Hair Menu" instance=ExtResource( 15 )]
+[node name="Up Arrow" parent="Menus/Hair Menu" instance=ExtResource( 15 )]
 self_modulate = Color( 1, 1, 1, 0.392157 )
 position = Vector2( -400, -135 )
 
-[node name="Down Arrow" parent="Hair Menu" instance=ExtResource( 14 )]
+[node name="Down Arrow" parent="Menus/Hair Menu" instance=ExtResource( 14 )]
 position = Vector2( -400, -135 )
 
-[node name="Clothes Menu" parent="." instance=ExtResource( 10 )]
+[node name="Clothes Menu" parent="Menus" instance=ExtResource( 10 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Head Accessories Menu" parent="." instance=ExtResource( 11 )]
+[node name="Head Accessories Menu" parent="Menus" instance=ExtResource( 11 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Face Accessories Menu" parent="." instance=ExtResource( 12 )]
+[node name="Face Accessories Menu" parent="Menus" instance=ExtResource( 12 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Glasses Menu" parent="." instance=ExtResource( 13 )]
+[node name="Glasses Menu" parent="Menus" instance=ExtResource( 13 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Earrings Menu" parent="." instance=ExtResource( 16 )]
+[node name="Earrings Menu" parent="Menus" instance=ExtResource( 16 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )
 
-[node name="Up Arrow" parent="Earrings Menu" instance=ExtResource( 15 )]
+[node name="Up Arrow" parent="Menus/Earrings Menu" instance=ExtResource( 15 )]
 self_modulate = Color( 1, 1, 1, 0.392157 )
 position = Vector2( -400, -135 )
 
-[node name="Down Arrow" parent="Earrings Menu" instance=ExtResource( 14 )]
+[node name="Down Arrow" parent="Menus/Earrings Menu" instance=ExtResource( 14 )]
 position = Vector2( -400, -135 )
 
-[node name="Facial Hair Menu" parent="." instance=ExtResource( 17 )]
+[node name="Facial Hair Menu" parent="Menus" instance=ExtResource( 17 )]
 visible = false
 position = Vector2( 400, 135 )
+script = ExtResource( 18 )

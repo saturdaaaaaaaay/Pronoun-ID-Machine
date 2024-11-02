@@ -1,15 +1,13 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/ContinueButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI Elements/Pages/IDCustomization.gd" type="Script" id=2]
 [ext_resource path="res://images/UI Elements/Backgrounds Panel.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/BackgroundsOptionTab.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/UI Elements/CharacterStage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://images/UI Elements/Donezo Button.png" type="Texture" id=6]
 [ext_resource path="res://images/UI Elements/Sticker Panel.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/UI Elements/Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://images/UI Elements/Badge Format.png" type="Texture" id=9]
-[ext_resource path="res://screenshot2.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/StickersOptionTab.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/UI Elements/Menus/StickerMenu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/UI Elements/Menus/BackgroundMenu.tscn" type="PackedScene" id=13]
@@ -53,17 +51,6 @@ texture = ExtResource( 9 )
 [node name="Background" parent="ID Badge" instance=ExtResource( 8 )]
 position = Vector2( 105.714, 81.7143 )
 scale = Vector2( 0.20707, 0.20707 )
-
-[node name="Photo" type="Sprite" parent="ID Badge"]
-visible = false
-position = Vector2( 270.839, 317.04 )
-scale = Vector2( 0.562665, 0.562665 )
-texture = ExtResource( 10 )
-
-[node name="Character Stage 1" parent="ID Badge" instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 105, 80 )
-scale = Vector2( 0.42, 0.42 )
 
 [node name="Pronouns" type="RichTextLabel" parent="ID Badge"]
 margin_left = 179.429

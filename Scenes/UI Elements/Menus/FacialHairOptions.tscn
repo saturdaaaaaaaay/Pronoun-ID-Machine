@@ -23,24 +23,36 @@ position = Vector2( -40, -90 )
 position = Vector2( 50, -90 )
 texture = ExtResource( 3 )
 
+[node name="Diamond Face Option" type="Sprite" parent="Short Beard Option"]
+visible = false
+position = Vector2( -285.714, 514.286 )
+scale = Vector2( 5.71429, 5.71429 )
+texture = ExtResource( 5 )
+
+[node name="Square Face Option" type="Sprite" parent="Short Beard Option"]
+visible = false
+position = Vector2( -285.714, 514.286 )
+scale = Vector2( 5.71429, 5.71429 )
+texture = ExtResource( 8 )
+
+[node name="Oval Face Option" type="Sprite" parent="Short Beard Option"]
+visible = false
+position = Vector2( -285.714, 514.286 )
+scale = Vector2( 5.71429, 5.71429 )
+texture = ExtResource( 4 )
+
+[node name="Round Square Face Option" type="Sprite" parent="Short Beard Option"]
+visible = false
+position = Vector2( -285.714, 514.286 )
+scale = Vector2( 5.71429, 5.71429 )
+texture = ExtResource( 6 )
+
+[node name="Round Face Option" type="Sprite" parent="Short Beard Option"]
+visible = false
+position = Vector2( -285.714, 514.286 )
+scale = Vector2( 5.71429, 5.71429 )
+texture = ExtResource( 7 )
+
 [node name="Bushy Beard Option" parent="." instance=ExtResource( 1 )]
 position = Vector2( 150, -90 )
 texture = ExtResource( 2 )
-
-[node name="Short Beard Options" type="Node2D" parent="."]
-visible = false
-
-[node name="Diamond Face Option" type="Sprite" parent="Short Beard Options"]
-texture = ExtResource( 5 )
-
-[node name="Square Face Option" type="Sprite" parent="Short Beard Options"]
-texture = ExtResource( 8 )
-
-[node name="Oval Face Option" type="Sprite" parent="Short Beard Options"]
-texture = ExtResource( 4 )
-
-[node name="Round Square Face Option" type="Sprite" parent="Short Beard Options"]
-texture = ExtResource( 6 )
-
-[node name="Round Face Option" type="Sprite" parent="Short Beard Options"]
-texture = ExtResource( 7 )

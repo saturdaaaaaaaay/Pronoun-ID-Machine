@@ -103,6 +103,12 @@ func update_arrows():
 		get_node("Right Arrow").set_self_modulate(Color(1, 1, 1, 0.392157))
 	else:
 		get_node("Right Arrow").set_self_modulate(Color(1, 1, 1, 1))
+		
+func set_input_pickable(pickable):
+	for tab in get_node("Tabs").get_children():
+		tab.set_input_pickable(pickable)
+	get_node("Left Arrow").set_input_pickable(pickable)
+	get_node("Right Arrow").set_input_pickable(pickable)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

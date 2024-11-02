@@ -73,6 +73,28 @@ func switch_background(path):
 func switch_background_color(path):
 	var self_modulate = get_node(path).get_self_modulate()
 	get_node("ID Badge/Background").set_self_modulate(self_modulate)
+	
+func set_input_pickable(pickable):
+	for tab in get_node("Tabs").get_children():
+		tab.set_input_pickable(pickable)
+		
+	for sticker in get_node("ID Badge/Stickers").get_children():
+		sticker.set_input_pickable(pickable)
+		
+	for options in get_node("Sticker Menu/Sticker Options").get_children():
+		for sticker in options.get_children():
+			sticker.set_input_pickable(pickable)
+	get_node("Sticker Menu/Left Arrow").set_input_pickable(pickable)
+	get_node("Sticker Menu/Right Arrow").set_input_pickable(pickable)
+		
+	for background in get_node("Background Menu/Background Options").get_children():
+		background.set_input_pickable(pickable)
+	for color in get_node("Background Menu/Background Color Options/Color Squares").get_children():
+		color.set_input_pickable(pickable)
+	get_node("Background Menu/Left Arrow").set_input_pickable(pickable)
+	get_node("Background Menu/Right Arrow").set_input_pickable(pickable)
+	
+	get_node("Back Button").set_input_pickable(pickable)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

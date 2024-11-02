@@ -18,9 +18,8 @@ func _on_ClickableItem_input_event(viewport, event, shape_idx):
 		var path = self.get_path()
 		if (event.pressed):
 			emit_signal("item_clicked", path)
-			print("clicked")
 		else:
 			emit_signal("item_unclicked", path)
 
-func make_input_not_pickable():
-	get_node("Area2D").input_pickable = false
+func set_input_pickable(pickable):
+	get_node("Area2D").input_pickable = pickable

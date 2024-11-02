@@ -40,6 +40,7 @@ visible = false
 
 [node name="Character Complete Confirmation" parent="." instance=ExtResource( 3 )]
 visible = false
+z_index = 3
 
 [node name="Fill Out Info" parent="." instance=ExtResource( 7 )]
 visible = false
@@ -49,7 +50,7 @@ visible = false
 
 [node name="ID Complete Confirmation" parent="." instance=ExtResource( 5 )]
 visible = false
-z_index = 2
+z_index = 3
 
 [node name="Final Page" parent="." instance=ExtResource( 6 )]
 visible = false

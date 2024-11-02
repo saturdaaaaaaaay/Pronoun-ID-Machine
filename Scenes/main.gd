@@ -46,6 +46,9 @@ func _ready():
 	get_node("Switch/Halloween Switch").connect("item_clicked", self, "show_clouds")
 	
 func show_character_customization(path):
+	get_node("Character Customization/Menu Manager").set_input_pickable(true)
+	get_node("Character Customization/Option Tabs").set_input_pickable(true)
+	
 	get_node("Title Page").hide()
 	get_node("Fill Out Info").hide()
 	get_node("Character Customization").show()
@@ -54,9 +57,13 @@ func show_character_customization(path):
 	
 func show_confirm_complete(path):
 	get_node("Character Complete Confirmation").show()
+	get_node("Character Customization/Menu Manager").set_input_pickable(false)
+	get_node("Character Customization/Option Tabs").set_input_pickable(false)
 	
 func hide_confirm_complete(path):
 	get_node("Character Complete Confirmation").hide()
+	get_node("Character Customization/Menu Manager").set_input_pickable(true)
+	get_node("Character Customization/Option Tabs").set_input_pickable(true)
 
 func show_fill_out_info(path):
 	get_node("Character Complete Confirmation").hide()
@@ -65,45 +72,63 @@ func show_fill_out_info(path):
 	get_node("Fill Out Info").show()
 	
 func show_id_customization(path):
-	var new_texture = get_node("Character Customization/Viewport").get_texture()
+	get_node("ID Customization").set_input_pickable(true)
 	get_node("Fill Out Info").hide()
 	get_node("Final Page").hide()
 	get_node("ID Customization").show()
-	get_node("ID Customization/ID Badge/Photo").set_texture(new_texture)
 	
 	var pronouns = get_node("Fill Out Info/Pronouns").get_text()
 	get_node("ID Customization/ID Badge/Pronouns").set_text(pronouns)
 	var name = get_node("Fill Out Info/Name").get_text()
 	get_node("ID Customization/ID Badge/Name").set_text(name)
 	get_node("Character Customization/Character Stage/Background").hide()
-	var character_stage = get_node("Character Customization/Character Stage").duplicate()
-	character_stage.set_scale(Vector2(.42, .42))
-	character_stage.set_position(Vector2(105, 80))
-	for child in get_node("ID Customization/ID Badge/Character Stage").get_children():
+	var character_stage = get_node("Character Customization/Character Stage")
+	var character_stage_duplicate = character_stage.duplicate()
+	character_stage_duplicate.set_scale(Vector2(.42, .42))
+	character_stage_duplicate.set_position(Vector2(105, 80))
+	for child in get_node(
+		"ID Customization/ID Badge/Character Stage"
+	).get_children():
 		child.queue_free()
-	get_node("ID Customization/ID Badge/Character Stage").add_child(character_stage)
+	get_node("ID Customization/ID Badge/Character Stage").add_child(
+		character_stage_duplicate
+	)
 	
 func show_ID_confirm_complete(path):
 	get_node("ID Complete Confirmation").show()
+	get_node("ID Customization").set_input_pickable(false)
 	
 func hide_ID_confirm_complete(path):
 	get_node("ID Complete Confirmation").hide()
+	get_node("ID Customization").set_input_pickable(true)
 	
 func show_final_page(path):
 	var ID = get_node("ID Customization/ID Badge").duplicate()
+	
 	for child in get_node("Final Page/Viewport").get_children():
 		child.queue_free()
-	get_node("Final Page/Viewport").add_child(ID.duplicate())
+		
+	var ID_duplicate = ID.duplicate()
+	get_node("Final Page/Viewport").add_child(ID_duplicate)
+	for child in ID_duplicate.get_children():
+		if child.name == "Character Stage":
+			child.get_child(0).toggle_blink(false)
+	
 	ID.set_scale(Vector2(1.5, 1.5))
 	ID.set_position(Vector2(325, 40))
+
+	for child in get_node("Final Page").get_children():
+		if "ID Badge" in child.name:
+			child.queue_free()
+			break
 	get_node("Final Page").add_child(ID)
+	
 	get_node("ID Customization").hide()
 	get_node("ID Complete Confirmation").hide()
 	get_node("Final Page").show()
 	
 func export_ID(path):
 	print("exporting image")
-	#get_node("Final Page/Viewport/ID Badge/Character Stage/Background").hide()
 	var image = get_node("Final Page/Viewport").get_texture().get_data()
 	image = image.get_rect(image.get_used_rect())
 	

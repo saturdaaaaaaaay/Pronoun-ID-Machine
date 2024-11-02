@@ -18,127 +18,127 @@ func _ready():
 		"tab_switched", get_node("Menu Manager"), "show_menu"
 	)
 	
-	for child in get_node("Menu Manager/Face Menu/Face Options").get_children():
+	for child in get_node("Menu Manager/Menus/Face Menu/Face Options").get_children():
 		child.connect("item_clicked", self, "switch_face")
 		
 	for child in get_node(
-		"Menu Manager/Face Menu/Skin Color Options/Color Squares"
+		"Menu Manager/Menus/Face Menu/Skin Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_skin_color")
 		
 	get_node(
-		"Menu Manager/Face Menu/Skin Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Face Menu/Skin Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_skin_color")
 		
-	for child in get_node("Menu Manager/Eyes Menu").get_children():
+	for child in get_node("Menu Manager/Menus/Eyes Menu").get_children():
 		child.connect("item_clicked", self, "switch_eyes")
 		
-	for child in get_node("Menu Manager/Nose Menu").get_children():
+	for child in get_node("Menu Manager/Menus/Nose Menu").get_children():
 		child.connect("item_clicked", self, "switch_nose")
 		
-	for child in get_node("Menu Manager/Mouth Menu/Mouth Options").get_children():
+	for child in get_node("Menu Manager/Menus/Mouth Menu/Mouth Options").get_children():
 		child.connect("item_clicked", self, "switch_mouth")
 		
-	for child in get_node("Menu Manager/Mouth Menu/Mouth Color Options/Color Squares").get_children():
+	for child in get_node("Menu Manager/Menus/Mouth Menu/Mouth Color Options/Color Squares").get_children():
 		child.connect("item_clicked", self, "switch_mouth_color")
 		
-	for child in get_node("Menu Manager/Eyebrows Menu").get_children():
+	for child in get_node("Menu Manager/Menus/Eyebrows Menu").get_children():
 		child.connect("item_clicked", self, "switch_eyebrows")
 		
-	for child in get_node("Menu Manager/Hair Menu/Hair Options").get_children():
+	for child in get_node("Menu Manager/Menus/Hair Menu/Hair Options").get_children():
 		child.connect("item_clicked", self, "switch_hair")
 		
 	for child in get_node(
-		"Menu Manager/Hair Menu/Hair Color Options/Color Squares"
+		"Menu Manager/Menus/Hair Menu/Hair Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_hair_color")
 		
 	get_node(
-		"Menu Manager/Hair Menu/Hair Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Hair Menu/Hair Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_hair_color")
 		
 	for child in get_node(
-		"Menu Manager/Clothes Menu/Clothes Options"
+		"Menu Manager/Menus/Clothes Menu/Clothes Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_clothes")
 		
 	for child in get_node(
-		"Menu Manager/Clothes Menu/Clothes Color Options/Color Squares"
+		"Menu Manager/Menus/Clothes Menu/Clothes Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_clothes_colors")
 		
 	get_node(
-		"Menu Manager/Clothes Menu/Clothes Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Clothes Menu/Clothes Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_clothes_colors")
 	
 	for child in get_node(
-		"Menu Manager/Head Accessories Menu/Head Accessories Options"
+		"Menu Manager/Menus/Head Accessories Menu/Head Accessories Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_head_accessories")
 		
 	for child in get_node(
-		"Menu Manager/Head Accessories Menu/Head Accessories Color Options/Color Squares"
+		"Menu Manager/Menus/Head Accessories Menu/Head Accessories Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_head_accessories_colors")
 		
 	get_node(
-		"Menu Manager/Head Accessories Menu/Head Accessories Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Head Accessories Menu/Head Accessories Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_head_accessories_colors")
 		
 	for child in get_node(
-		"Menu Manager/Face Accessories Menu/Face Accessories Options"
+		"Menu Manager/Menus/Face Accessories Menu/Face Accessories Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_face_accessories")
 		
 	for child in get_node(
-		"Menu Manager/Face Accessories Menu/Face Accessories Color Options/Color Squares"
+		"Menu Manager/Menus/Face Accessories Menu/Face Accessories Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_face_accessories_color")
 		
 	get_node(
-		"Menu Manager/Face Accessories Menu/Face Accessories Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Face Accessories Menu/Face Accessories Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_face_accessories_color")
 		
 	for child in get_node(
-		"Menu Manager/Glasses Menu/Glasses Options"
+		"Menu Manager/Menus/Glasses Menu/Glasses Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_glasses")
 		
 	for child in get_node(
-		"Menu Manager/Glasses Menu/Glasses Color Options/Color Squares"
+		"Menu Manager/Menus/Glasses Menu/Glasses Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_glasses_color")
 		
 	get_node(
-		"Menu Manager/Glasses Menu/Glasses Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Glasses Menu/Glasses Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_glasses_color")
 	
 	for child in get_node(
-		"Menu Manager/Earrings Menu/Earrings Options"
+		"Menu Manager/Menus/Earrings Menu/Earrings Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_earrings")
 		
 	for child in get_node(
-		"Menu Manager/Earrings Menu/Earrings Color Options/Color Squares"
+		"Menu Manager/Menus/Earrings Menu/Earrings Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_earrings_color")
 		
 	get_node(
-		"Menu Manager/Earrings Menu/Earrings Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Earrings Menu/Earrings Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_earrings_color")
 	
 	for child in get_node(
-		"Menu Manager/Facial Hair Menu/Facial Hair Options"
+		"Menu Manager/Menus/Facial Hair Menu/Facial Hair Options"
 	).get_children():
 		child.connect("item_clicked", self, "switch_facial_hair")
 		
 	for child in get_node(
-		"Menu Manager/Facial Hair Menu/Facial Hair Color Options/Color Squares"
+		"Menu Manager/Menus/Facial Hair Menu/Facial Hair Color Options/Color Squares"
 	).get_children():
 		child.connect("item_clicked", self, "switch_facial_hair_color")
 		
 	get_node(
-		"Menu Manager/Facial Hair Menu/Facial Hair Color Options/Color Squares/Color Picker Square"
+		"Menu Manager/Menus/Facial Hair Menu/Facial Hair Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_facial_hair_color")
 	
 func switch_face(path):
@@ -151,7 +151,7 @@ func switch_face(path):
 	)
 	current_face = get_node(path).name
 	if current_beard == "Short Beard Option":
-		switch_facial_hair("Menu Manager/Facial Hair Menu/Facial Hair Options/Short Beard Option")
+		switch_facial_hair("Menu Manager/Menus/Facial Hair Menu/Facial Hair Options/Short Beard Option")
 	
 func switch_skin_color(path):
 	var color = get_node(path).get_self_modulate()
@@ -179,7 +179,7 @@ func switch_mouth(path):
 		show_colors = true
 		
 	get_node("Character Stage/Features/Mouth").set_self_modulate(color)
-	get_node("Menu Manager/Mouth Menu/Mouth Color Options").set_visible(show_colors)
+	get_node("Menu Manager/Menus/Mouth Menu/Mouth Color Options").set_visible(show_colors)
 	
 func switch_mouth_color(path):
 	var color = get_node(path).get_self_modulate()
@@ -243,7 +243,7 @@ func switch_head_accessories(path):
 		show_colors = true
 	else:
 		get_node("Character Stage/Features/Head Accessory").set_self_modulate(Color( 1, 1, 1, 1 ))
-	get_node("Menu Manager/Head Accessories Menu/Head Accessories Color Options").set_visible(show_colors)
+	get_node("Menu Manager/Menus/Head Accessories Menu/Head Accessories Color Options").set_visible(show_colors)
 	
 func switch_head_accessories_colors(path):
 	var color = get_node(path).get_self_modulate()
@@ -295,7 +295,7 @@ func switch_facial_hair(path):
 	current_beard = get_node(path).name
 	
 	if get_node(path).name == "Short Beard Option":
-		path = "Menu Manager/Facial Hair Menu/Facial Hair Options/Short Beard Options/" + current_face
+		path = "Menu Manager/Menus/Facial Hair Menu/Facial Hair Options/Short Beard Option/" + current_face
 	var new_texture = get_node(path).texture
 	get_node("Character Stage/Features/Facial Hair").set_texture(new_texture)
 	

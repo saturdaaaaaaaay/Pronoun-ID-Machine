@@ -71,10 +71,10 @@ position = Vector2( 180, 90 )
 
 [node name="ColorPickerOld" type="ColorPicker" parent="."]
 visible = false
-margin_left = 441.0
-margin_top = 138.0
-margin_right = 749.0
-margin_bottom = 550.0
+margin_left = 445.0
+margin_top = 142.0
+margin_right = 753.0
+margin_bottom = 554.0
 edit_alpha = false
 presets_enabled = false
 presets_visible = false
