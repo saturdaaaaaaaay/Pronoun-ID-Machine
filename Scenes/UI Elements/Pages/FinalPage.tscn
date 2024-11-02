@@ -11,30 +11,30 @@
 [node name="Final Page" type="Node2D"]
 
 [node name="Main Panel" type="Sprite" parent="."]
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="ID Badge" type="Node2D" parent="."]
-position = Vector2( 200, -10 )
-scale = Vector2( 1.25, 1.25 )
+visible = false
+position = Vector2( 375, 215 )
+scale = Vector2( 1.75, 1.75 )
 
 [node name="Badge Format" type="Sprite" parent="ID Badge"]
-position = Vector2( 215.839, 235.039 )
-scale = Vector2( 0.177187, 0.177187 )
+scale = Vector2( 0.177, 0.177 )
 texture = ExtResource( 4 )
 
 [node name="Background" parent="ID Badge" instance=ExtResource( 3 )]
-position = Vector2( 99.8395, 78.0395 )
+visible = false
 scale = Vector2( 0.20707, 0.20707 )
 
 [node name="Photo" type="Sprite" parent="ID Badge"]
 visible = false
-position = Vector2( 270.839, 317.04 )
 scale = Vector2( 0.562665, 0.562665 )
 texture = ExtResource( 5 )
 
 [node name="Character Stage" parent="ID Badge" instance=ExtResource( 6 )]
-position = Vector2( 99.2, 79.2 )
+position = Vector2( -144, -164 )
 scale = Vector2( 0.56, 0.56 )
 
 [node name="Download Button" parent="." instance=ExtResource( 2 )]

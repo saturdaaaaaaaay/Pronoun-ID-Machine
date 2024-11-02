@@ -11,4 +11,5 @@ __meta__ = {
 [node name="Head Accessories Options" parent="." instance=ExtResource( 2 )]
 
 [node name="Head Accessories Color Options" parent="." instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 0, 195 )

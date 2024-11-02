@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Character Features/Faces/Diamond Face.png" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Scenes/UI Elements/CharacterStage.gd" type="Script" id=17]
 [ext_resource path="res://images/Character Features/Eyes/Blink.png" type="Texture" id=18]
 [ext_resource path="res://Scenes/Character Features/Earrings.tscn" type="PackedScene" id=19]
+[ext_resource path="res://images/Character Features/Facial Hair/Short Beard.PNG" type="Texture" id=20]
+[ext_resource path="res://Scenes/Character Features/FacialHair.tscn" type="PackedScene" id=21]
 
 [node name="Character Stage" type="Node2D"]
 script = ExtResource( 17 )
@@ -38,6 +40,9 @@ script = ExtResource( 17 )
 [node name="Head" parent="Features/Skin Features" instance=ExtResource( 7 )]
 texture = ExtResource( 2 )
 
+[node name="Earrings" parent="Features" instance=ExtResource( 19 )]
+visible = false
+
 [node name="Nose" parent="Features" instance=ExtResource( 10 )]
 
 [node name="Eyes" parent="Features" instance=ExtResource( 11 )]
@@ -45,8 +50,6 @@ texture = ExtResource( 2 )
 [node name="Blink" parent="Features" instance=ExtResource( 11 )]
 visible = false
 texture = ExtResource( 18 )
-
-[node name="Mouth" parent="Features" instance=ExtResource( 5 )]
 
 [node name="Eyebrows" parent="Features" instance=ExtResource( 12 )]
 
@@ -57,17 +60,20 @@ texture = ExtResource( 3 )
 visible = false
 texture = ExtResource( 3 )
 
-[node name="Face Accessory" parent="Features" instance=ExtResource( 15 )]
-visible = false
-
 [node name="Glasses" parent="Features" instance=ExtResource( 16 )]
 visible = false
 self_modulate = Color( 0, 0, 0, 1 )
 
 [node name="Hair Front" parent="Features" instance=ExtResource( 13 )]
 
-[node name="Head Accessory" parent="Features" instance=ExtResource( 14 )]
+[node name="Facial Hair" parent="Features" instance=ExtResource( 21 )]
+visible = false
+texture = ExtResource( 20 )
+
+[node name="Mouth" parent="Features" instance=ExtResource( 5 )]
+
+[node name="Face Accessory" parent="Features" instance=ExtResource( 15 )]
 visible = false
 
-[node name="Earrings" parent="Features" instance=ExtResource( 19 )]
+[node name="Head Accessory" parent="Features" instance=ExtResource( 14 )]
 visible = false

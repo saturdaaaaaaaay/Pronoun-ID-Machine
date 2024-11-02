@@ -8,6 +8,7 @@
 extents = Vector2( 127.973, 130.676 )
 
 [node name="Clear Button" instance=ExtResource( 1 )]
+scale = Vector2( 0.37, 0.37 )
 texture = ExtResource( 3 )
 script = ExtResource( 2 )
 

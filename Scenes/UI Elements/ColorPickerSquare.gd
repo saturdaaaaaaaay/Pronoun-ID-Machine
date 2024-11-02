@@ -8,7 +8,7 @@ signal self_modulate_changed(path)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var picker = get_node("Popup/ColorPicker")
+	var picker = get_node("Popup/Node2D/ColorPicker")
 	picker.set_size(Vector2(50, 50))
 	
 	# Hide color bar
@@ -24,11 +24,11 @@ func _ready():
 	picker.get_child(4).get_child(4).get_child(1).set_visible(false)
 	
 	get_node(".").connect("item_clicked", self, "show_popup")
-	get_node("Popup/ColorPicker").connect("color_changed", self, "change_color")
+	get_node("Popup/Node2D/ColorPicker").connect("color_changed", self, "change_color")
 	
 func show_popup(path):
 	get_node("Popup").popup()
-	var picker = get_node("Popup/ColorPicker")
+	var picker = get_node("Popup/Node2D/ColorPicker")
 	picker.set_size(Vector2(50, 50))
 	
 func change_color(color):

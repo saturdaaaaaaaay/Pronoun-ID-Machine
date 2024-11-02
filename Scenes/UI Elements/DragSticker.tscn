@@ -8,7 +8,6 @@
 extents = Vector2( 50, 45.9459 )
 
 [node name="Drag Sticker" instance=ExtResource( 2 )]
-position = Vector2( -1, 0 )
 z_index = 3
 texture = ExtResource( 3 )
 centered = true

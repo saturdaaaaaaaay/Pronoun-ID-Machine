@@ -15,10 +15,9 @@ margin_bottom = 547.0
 color = Color( 1, 1, 1, 0 )
 
 [node name="Main Panel" type="Sprite" parent="."]
-position = Vector2( 145, -59 )
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 4 )
 centered = false
-offset = Vector2( -145, 59 )
 
 [node name="Hmm Button" parent="." instance=ExtResource( 1 )]
 texture = ExtResource( 3 )

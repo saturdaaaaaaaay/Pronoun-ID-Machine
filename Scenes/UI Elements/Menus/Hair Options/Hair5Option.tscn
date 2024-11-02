@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/UI Elements/Menus/HairOption.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI Elements/ClickableItem.tscn" type="PackedScene" id=2]
-[ext_resource path="res://images/Character Features/Hair/Hair Front 5.png" type="Texture" id=3]
-[ext_resource path="res://images/Character Features/Hair/Hair Back 5.png" type="Texture" id=4]
+[ext_resource path="res://images/Character Features/Hair/Hair Front 5.PNG" type="Texture" id=3]
+[ext_resource path="res://images/Character Features/Hair/Hair Back 5.PNG" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 245.714, 266.873 )

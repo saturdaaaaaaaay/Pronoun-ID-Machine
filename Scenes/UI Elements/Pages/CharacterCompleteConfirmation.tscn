@@ -7,10 +7,9 @@
 [node name="Character Complete Confirmation" type="Node2D"]
 
 [node name="Main Panel" type="Sprite" parent="."]
-position = Vector2( 145, -59 )
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 1 )
 centered = false
-offset = Vector2( -145, 59 )
 
 [node name="Nah Button" parent="." instance=ExtResource( 2 )]
 

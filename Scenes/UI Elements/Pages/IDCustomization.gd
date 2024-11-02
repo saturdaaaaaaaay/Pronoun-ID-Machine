@@ -4,6 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var non_color_backgrounds = ["Clocktower Colored Background Option"]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +14,8 @@ func _ready():
 	get_node("Sticker Menu").connect("sticker_dropped", self, "attach_sticker")
 	for child in get_node("Background Menu/Background Options").get_children():
 		child.connect("item_clicked", self, "switch_background")
+	for child in get_node("Background Menu/Background Color Options/Color Squares").get_children():
+		child.connect("item_clicked", self, "switch_background_color")
 		
 func switch_tabs(path):
 	var tab = get_node(path)
@@ -47,7 +50,7 @@ func attach_sticker(path):
 		get_node("ID Badge/Stickers").add_child(sticker)
 		sticker.set_texture(texture)
 		sticker.set_global_position(position)
-		sticker.set_global_scale(Vector2(.37, .37))
+		sticker.set_global_scale(Vector2(.5, .5))
 		sticker.connect("item_clicked", self, "move_sticker")
 		
 func move_sticker(path):
@@ -56,11 +59,20 @@ func move_sticker(path):
 		get_node("Sticker Menu").drag_sticker(path)
 		
 func switch_background(path):
-	if get_node("Background Menu").is_visible():
-		var texture = get_node(path).get_texture()
-		get_node("ID Badge/Background").set_texture(texture)
-		var self_modulate = get_node(path).get_self_modulate()
-		get_node("ID Badge/Background").set_self_modulate(self_modulate)
+	var texture = get_node(path).get_texture()
+	var name = get_node(path).name
+	get_node("ID Badge/Background").set_texture(texture)
+	var show_colors = true
+	if name in non_color_backgrounds:
+		show_colors = false
+		get_node("ID Badge/Background").set_self_modulate(Color( 1, 1, 1, 1 ))
+	else:
+		switch_background_color(path)
+	get_node("Background Menu/Background Color Options").set_visible(show_colors)
+		
+func switch_background_color(path):
+	var self_modulate = get_node(path).get_self_modulate()
+	get_node("ID Badge/Background").set_self_modulate(self_modulate)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -19,6 +19,7 @@ var HEAD_ACCESSORIES_MENU = "Head Accessories Menu"
 var GLASSES_MENU = "Glasses Menu"
 var FACE_ACCESSORIES_MENU = "Face Accessories Menu"
 var EARRINGS_MENU = "Earrings Menu"
+var FACIAL_HAIR_MENU = "Facial Hair Menu"
 
 var active_tab = null
 
@@ -62,6 +63,8 @@ func set_tab_active(path):
 		emit_signal("tab_switched", FACE_ACCESSORIES_MENU)
 	if tab_name == "Earrings Option Tab":
 		emit_signal("tab_switched", EARRINGS_MENU)
+	if tab_name == "Facial Hair Option Tab":
+		emit_signal("tab_switched", FACIAL_HAIR_MENU)
 
 func move_left(path):
 	if get_node("Tabs").get_child(0).get_position().x == FAR_LEFT:

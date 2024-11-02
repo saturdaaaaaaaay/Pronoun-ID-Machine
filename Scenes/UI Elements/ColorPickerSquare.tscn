@@ -25,16 +25,19 @@ margin_top = 96.0
 margin_right = 580.0
 margin_bottom = 516.0
 
-[node name="ColorPickerPanel" type="Sprite" parent="Popup" index="0"]
+[node name="Node2D" type="Node2D" parent="Popup" index="0"]
+z_index = 2
+
+[node name="ColorPickerPanel" type="Sprite" parent="Popup/Node2D" index="0"]
 position = Vector2( 150, 170 )
 scale = Vector2( 0.9, 0.75 )
 texture = ExtResource( 4 )
 
-[node name="ColorPicker" type="ColorPicker" parent="Popup" index="1"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 320.0
-margin_bottom = 474.0
+[node name="ColorPicker" type="ColorPicker" parent="Popup/Node2D" index="1"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 324.0
+margin_bottom = 478.0
 edit_alpha = false
 deferred_mode = true
 presets_enabled = false

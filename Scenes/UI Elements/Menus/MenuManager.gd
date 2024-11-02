@@ -50,26 +50,13 @@ func scroll_up(path, bottom, top, increment, menu):
 	update_arrow(menu, top, bottom)
 
 func hair_scroll_down(path):
-	#var hair_total = get_node("Hair Menu/Hair Options").get_child_count()
-	#if get_node("Hair Menu/Hair Options").get_child(hair_total-1).get_position().y == HAIR_BOTTOM:
-	#	return
-	#for child in get_node("Hair Menu/Hair Options").get_children():
-	#	child.translate(Vector2(0, -HAIR_INCREMENT))
-	#	toggle_visibility(child, top, bottom)
 	scroll_down("Hair Menu/Hair Options", HAIR_BOTTOM, HAIR_TOP, HAIR_INCREMENT, "Hair")
-	#update_arrow(menu, top, bottom)
 	
 func hair_scroll_up(path):
-	#if get_node("Hair Menu/Hair Options").get_child(0).get_position().y == HAIR_TOP:
-	#	return
-	#for child in get_node("Hair Menu/Hair Options").get_children():
-#		child.translate(Vector2(0, HAIR_INCREMENT))
-#		toggle_visibility(child, top, bottom)
 	scroll_up("Hair Menu/Hair Options", HAIR_BOTTOM, HAIR_TOP, HAIR_INCREMENT, "Hair")
-	#update_arrow(menu, top, bottom)
 	
 func earrings_scroll_down(path):
-	scroll_down("Earrings Menu/Earrings Options", EARRINGS_BOTTOM, EARRINGS_TOP, EARRINGS_INCREMENT, "Earrings")	
+	scroll_down("Earrings Menu/Earrings Options", EARRINGS_BOTTOM, EARRINGS_TOP, EARRINGS_INCREMENT, "Earrings")
 	
 func earrings_scroll_up(path):
 	scroll_up("Earrings Menu/Earrings Options", EARRINGS_BOTTOM, EARRINGS_TOP, EARRINGS_INCREMENT, "Earrings")

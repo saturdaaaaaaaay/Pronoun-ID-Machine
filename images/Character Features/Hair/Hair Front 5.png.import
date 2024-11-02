@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hair Front 5.png-0d503e3b7b1a07619cbaeedf092f03db.stex"
+path="res://.import/Hair Front 5.PNG-11c5cde889f392273a0d9cf7d8bd6cc7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Character Features/Hair/Hair Front 5.png"
-dest_files=[ "res://.import/Hair Front 5.png-0d503e3b7b1a07619cbaeedf092f03db.stex" ]
+source_file="res://images/Character Features/Hair/Hair Front 5.PNG"
+dest_files=[ "res://.import/Hair Front 5.PNG-11c5cde889f392273a0d9cf7d8bd6cc7.stex" ]
 
 [params]
 

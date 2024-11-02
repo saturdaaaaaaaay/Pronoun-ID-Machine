@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hoodie.png-f2bf7f317468d1cddf76e9caace02cdb.stex"
+path="res://.import/Hoodie.PNG-38741385543a090cb8be86fe2b8c7bed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Character Features/Clothes/Hoodie.png"
-dest_files=[ "res://.import/Hoodie.png-f2bf7f317468d1cddf76e9caace02cdb.stex" ]
+source_file="res://images/Character Features/Clothes/Hoodie.PNG"
+dest_files=[ "res://.import/Hoodie.PNG-38741385543a090cb8be86fe2b8c7bed.stex" ]
 
 [params]
 

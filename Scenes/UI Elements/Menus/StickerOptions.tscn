@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/Menus/StickerOption.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/UI Elements/Stickers/Non-binary Pride Sticker.png" type="Texture" id=2]
@@ -20,83 +20,111 @@
 [ext_resource path="res://images/UI Elements/Stickers/Love is Love Sticker.png" type="Texture" id=18]
 [ext_resource path="res://images/UI Elements/Stickers/Pride Heart Sticker.png" type="Texture" id=19]
 [ext_resource path="res://images/UI Elements/Stickers/Heart Sticker.png" type="Texture" id=20]
+[ext_resource path="res://images/UI Elements/Stickers/Ankh Sticker.png" type="Texture" id=21]
+[ext_resource path="res://images/UI Elements/Stickers/Dino Head Sticker.png" type="Texture" id=22]
+[ext_resource path="res://images/UI Elements/Stickers/BHS Sticker.png" type="Texture" id=23]
+[ext_resource path="res://images/UI Elements/Stickers/Cakey Cat Sticker.png" type="Texture" id=24]
 
 [node name="Sticker Options" type="Node2D"]
+position = Vector2( -1, 0 )
 
-[node name="Bi Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Smaller Stickers" type="Node2D" parent="."]
+
+[node name="Lesbian Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 25, 25 )
+texture = ExtResource( 13 )
 
-[node name="Nonbinary Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Pride Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 75, 25 )
-texture = ExtResource( 2 )
-
-[node name="Pride Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 125, 25 )
 texture = ExtResource( 7 )
 
-[node name="Aromantic Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Bi Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 125, 25 )
+
+[node name="Transgender Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 175, 25 )
+texture = ExtResource( 17 )
+
+[node name="Pansexual Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 225, 25 )
+texture = ExtResource( 8 )
+
+[node name="Nonbinary Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 275, 25 )
+texture = ExtResource( 2 )
+
+[node name="Aromantic Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 325, 25 )
 texture = ExtResource( 10 )
 
-[node name="Asexual Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 225, 25 )
+[node name="Asexual Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 375, 25 )
 texture = ExtResource( 9 )
 
-[node name="Love is Love Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Genderfluid Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 425, 25 )
+texture = ExtResource( 11 )
+
+[node name="Intersex Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
+position = Vector2( 475, 25 )
+texture = ExtResource( 12 )
+
+[node name="Love is Love Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 25, 175 )
 texture = ExtResource( 18 )
 
-[node name="Pride Heart Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Pride Heart Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 75, 175 )
 texture = ExtResource( 19 )
 
-[node name="Heart Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Heart Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 125, 175 )
 texture = ExtResource( 20 )
 
-[node name="Star Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Star Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 175, 175 )
 texture = ExtResource( 15 )
 
-[node name="Egg Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Egg Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 225, 175 )
 texture = ExtResource( 16 )
 
-[node name="Duck Sticker Option" parent="." instance=ExtResource( 1 )]
+[node name="Duck Sticker Option" parent="Smaller Stickers" instance=ExtResource( 1 )]
 position = Vector2( 275, 175 )
 texture = ExtResource( 14 )
 
-[node name="Genderfluid Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 275, 25 )
-texture = ExtResource( 11 )
+[node name="Bigger Stickers" type="Node2D" parent="."]
 
-[node name="Intersex Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 325, 25 )
-texture = ExtResource( 12 )
+[node name="DWA Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+position = Vector2( 50, 100 )
 
-[node name="Lesbian Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 375, 25 )
-texture = ExtResource( 13 )
-
-[node name="Pansexual Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 25, 60 )
-texture = ExtResource( 8 )
-
-[node name="Transgender Sticker Option" parent="." instance=ExtResource( 1 )]
-position = Vector2( 75, 60 )
-texture = ExtResource( 17 )
-
-[node name="DWA Sticker Option" parent="." instance=ExtResource( 3 )]
-position = Vector2( 45, 120 )
-
-[node name="Shrek Sticker Option" parent="." instance=ExtResource( 3 )]
-position = Vector2( 135, 120 )
+[node name="Shrek Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+position = Vector2( 150, 100 )
 texture = ExtResource( 4 )
 
-[node name="Wolf Sticker Option" parent="." instance=ExtResource( 3 )]
-position = Vector2( 225, 120 )
+[node name="Wolf Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+position = Vector2( 250, 100 )
 texture = ExtResource( 5 )
 
-[node name="Roz Sticker Option" parent="." instance=ExtResource( 3 )]
-position = Vector2( 315, 120 )
+[node name="Roz Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+position = Vector2( 350, 100 )
 texture = ExtResource( 6 )
+
+[node name="Dino Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+position = Vector2( 450, 100 )
+texture = ExtResource( 22 )
+
+[node name="Cakey Cat Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 550, 100 )
+texture = ExtResource( 24 )
+
+[node name="Ankh Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 650, 100 )
+texture = ExtResource( 21 )
+
+[node name="BHS Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 750, 100 )
+texture = ExtResource( 23 )

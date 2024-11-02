@@ -1,6 +1,5 @@
 extends Node2D
 
-
 # Declare member variables here. Examples:
 # var b = "text"
 
@@ -43,6 +42,9 @@ func _ready():
 		"item_clicked", self, "show_id_customization"
 	)
 	
+	get_node("Switch/Cloud Switch").connect("item_clicked", self, "show_halloween")
+	get_node("Switch/Halloween Switch").connect("item_clicked", self, "show_clouds")
+	
 func show_character_customization(path):
 	get_node("Title Page").hide()
 	get_node("Fill Out Info").hide()
@@ -75,9 +77,11 @@ func show_id_customization(path):
 	get_node("ID Customization/ID Badge/Name").set_text(name)
 	get_node("Character Customization/Character Stage/Background").hide()
 	var character_stage = get_node("Character Customization/Character Stage").duplicate()
-	character_stage.set_scale(Vector2(.56, .56))
-	character_stage.set_position(Vector2(99.2, 79.2))
-	get_node("ID Customization/ID Badge").add_child(character_stage)
+	character_stage.set_scale(Vector2(.42, .42))
+	character_stage.set_position(Vector2(105, 80))
+	for child in get_node("ID Customization/ID Badge/Character Stage").get_children():
+		child.queue_free()
+	get_node("ID Customization/ID Badge/Character Stage").add_child(character_stage)
 	
 func show_ID_confirm_complete(path):
 	get_node("ID Complete Confirmation").show()
@@ -87,9 +91,11 @@ func hide_ID_confirm_complete(path):
 	
 func show_final_page(path):
 	var ID = get_node("ID Customization/ID Badge").duplicate()
+	for child in get_node("Final Page/Viewport").get_children():
+		child.queue_free()
 	get_node("Final Page/Viewport").add_child(ID.duplicate())
-	ID.set_scale(Vector2(1.25, 1.25))
-	ID.set_position(Vector2(200, -10))
+	ID.set_scale(Vector2(1.5, 1.5))
+	ID.set_position(Vector2(325, 40))
 	get_node("Final Page").add_child(ID)
 	get_node("ID Customization").hide()
 	get_node("ID Complete Confirmation").hide()
@@ -106,6 +112,22 @@ func export_ID(path):
 	var buf = image.save_png_to_buffer()
 	if OS.has_feature('JavaScript'):
 		JavaScript.download_buffer(buf,"screenshot"+".png")
+		
+func show_halloween(path):
+	get_node("Clouds").hide()
+	get_node("Halloween").show()
+	get_node("Switch/Cloud Switch").hide()
+	get_node("Switch/Halloween Switch").show()
+	var color = Color(0.54902, 0.819608, 1)
+	get_node("Background").set_frame_color(Color(0.393378, 0.077972, 0.570313))
+	
+func show_clouds(path):
+	get_node("Clouds").show()
+	get_node("Halloween").hide()
+	get_node("Switch/Cloud Switch").show()
+	get_node("Switch/Halloween Switch").hide()
+	get_node("Background").set_frame_color(Color(0.54902, 0.819608, 1))
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

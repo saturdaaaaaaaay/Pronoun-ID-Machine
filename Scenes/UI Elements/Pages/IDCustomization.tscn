@@ -22,16 +22,20 @@ script = ExtResource( 2 )
 
 [node name="Stickers Tab" parent="Tabs" instance=ExtResource( 11 )]
 self_modulate = Color( 1, 0.682353, 0.533333, 1 )
+scale = Vector2( 1.35, 1.35 )
 
 [node name="Backgrounds Tab" parent="Tabs" instance=ExtResource( 4 )]
 self_modulate = Color( 0.956863, 0.396078, 0.141176, 1 )
+scale = Vector2( 1.35, 1.35 )
 
 [node name="Sticker Panel" type="Sprite" parent="."]
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="Backgrounds Panel" type="Sprite" parent="."]
 visible = false
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -39,7 +43,7 @@ centered = false
 texture = ExtResource( 6 )
 
 [node name="ID Badge" type="Node2D" parent="."]
-scale = Vector2( 1.25, 1.25 )
+scale = Vector2( 1.75, 1.75 )
 
 [node name="Badge Format" type="Sprite" parent="ID Badge"]
 position = Vector2( 215.839, 235.039 )
@@ -47,7 +51,7 @@ scale = Vector2( 0.177187, 0.177187 )
 texture = ExtResource( 9 )
 
 [node name="Background" parent="ID Badge" instance=ExtResource( 8 )]
-position = Vector2( 99.8395, 78.0395 )
+position = Vector2( 105.714, 81.7143 )
 scale = Vector2( 0.20707, 0.20707 )
 
 [node name="Photo" type="Sprite" parent="ID Badge"]
@@ -58,38 +62,41 @@ texture = ExtResource( 10 )
 
 [node name="Character Stage 1" parent="ID Badge" instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 99.2, 79.2 )
-scale = Vector2( 0.56, 0.56 )
+position = Vector2( 105, 80 )
+scale = Vector2( 0.42, 0.42 )
 
 [node name="Pronouns" type="RichTextLabel" parent="ID Badge"]
-margin_left = 181.0
-margin_top = 142.0
-margin_right = 296.0
-margin_bottom = 158.0
+margin_left = 179.429
+margin_top = 168.0
+margin_right = 294.429
+margin_bottom = 184.0
 mouse_filter = 2
 
 [node name="Name" type="RichTextLabel" parent="ID Badge"]
-margin_left = 152.8
-margin_top = 168.0
-margin_right = 267.8
-margin_bottom = 184.0
+margin_left = 164.0
+margin_top = 143.429
+margin_right = 279.0
+margin_bottom = 159.429
 mouse_filter = 2
 
 [node name="Stickers" type="Node2D" parent="ID Badge"]
 z_index = 1
 
+[node name="Character Stage" type="Node2D" parent="ID Badge"]
+
 [node name="Sticker Menu" parent="." instance=ExtResource( 12 )]
 
 [node name="Background Menu" parent="." instance=ExtResource( 13 )]
 visible = false
-position = Vector2( 386, 119 )
+position = Vector2( 546, 161 )
 scale = Vector2( 0.45, 0.45 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 129.0
-margin_top = 105.0
-margin_right = 380.0
-margin_bottom = 476.0
+visible = false
+margin_left = 171.0
+margin_top = 137.0
+margin_right = 541.0
+margin_bottom = 674.0
 mouse_filter = 2
 
 [node name="Back Button" parent="." instance=ExtResource( 14 )]

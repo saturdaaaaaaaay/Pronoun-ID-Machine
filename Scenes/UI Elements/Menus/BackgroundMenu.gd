@@ -5,8 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 var FAR_LEFT = 0
-var FAR_RIGHT = 600
-var INCREMENT = 300
+var FAR_RIGHT = 800
+var INCREMENT = 400
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

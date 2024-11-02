@@ -8,6 +8,7 @@
 extents = Vector2( 32.4324, 21.6216 )
 
 [node name="Right Arrow" instance=ExtResource( 1 )]
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 script = ExtResource( 2 )
 

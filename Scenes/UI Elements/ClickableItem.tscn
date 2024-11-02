@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Clickable Item" instance=ExtResource( 1 )]
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="." index="0"]

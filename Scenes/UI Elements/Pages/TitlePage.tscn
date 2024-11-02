@@ -7,6 +7,7 @@
 [node name="Title Page" type="Node2D"]
 
 [node name="Main Panel" type="Sprite" parent="."]
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 centered = false
 

@@ -16,13 +16,13 @@ __meta__ = {
 
 [node name="Left Arrow" parent="." instance=ExtResource( 3 )]
 self_modulate = Color( 1, 1, 1, 0.392157 )
-position = Vector2( -90, 275 )
+position = Vector2( -100, 400 )
 scale = Vector2( 1, 1 )
 
 [node name="Right Arrow" parent="." instance=ExtResource( 2 )]
-position = Vector2( 100, 275 )
+position = Vector2( 432, 400 )
 scale = Vector2( 1, 1 )
 
 [node name="Background Color Options" parent="." instance=ExtResource( 5 )]
-position = Vector2( 13, 523 )
+position = Vector2( 50, 750 )
 scale = Vector2( 2, 2 )

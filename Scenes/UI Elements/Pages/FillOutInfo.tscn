@@ -12,6 +12,7 @@
 script = ExtResource( 2 )
 
 [node name="Main Panel" type="Sprite" parent="."]
+scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -19,18 +20,18 @@ centered = false
 texture = ExtResource( 4 )
 
 [node name="Name" type="TextEdit" parent="."]
-margin_left = 312.0
-margin_top = 275.0
-margin_right = 749.0
-margin_bottom = 308.0
+margin_left = 420.0
+margin_top = 370.0
+margin_right = 1015.0
+margin_bottom = 415.0
 custom_colors/background_color = Color( 1, 1, 1, 1 )
 fold_gutter = true
 
 [node name="Pronouns" type="TextEdit" parent="."]
-margin_left = 312.0
-margin_top = 326.0
-margin_right = 749.0
-margin_bottom = 359.0
+margin_left = 420.0
+margin_top = 440.0
+margin_right = 1015.0
+margin_bottom = 485.0
 theme = SubResource( 1 )
 custom_colors/background_color = Color( 1, 1, 1, 1 )
 fold_gutter = true

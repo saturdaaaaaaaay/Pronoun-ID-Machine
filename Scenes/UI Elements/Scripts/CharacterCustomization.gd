@@ -5,7 +5,10 @@ signal character_complete(path)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var color_mouths = ["Mouth 3 Option"]
+var color_head_accessories = ["Baseball Cap Option"]
+var current_face = "Diamond Face Option"
+var current_beard = "None"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,8 +36,11 @@ func _ready():
 	for child in get_node("Menu Manager/Nose Menu").get_children():
 		child.connect("item_clicked", self, "switch_nose")
 		
-	for child in get_node("Menu Manager/Mouth Menu").get_children():
+	for child in get_node("Menu Manager/Mouth Menu/Mouth Options").get_children():
 		child.connect("item_clicked", self, "switch_mouth")
+		
+	for child in get_node("Menu Manager/Mouth Menu/Mouth Color Options/Color Squares").get_children():
+		child.connect("item_clicked", self, "switch_mouth_color")
 		
 	for child in get_node("Menu Manager/Eyebrows Menu").get_children():
 		child.connect("item_clicked", self, "switch_eyebrows")
@@ -121,6 +127,20 @@ func _ready():
 		"Menu Manager/Earrings Menu/Earrings Color Options/Color Squares/Color Picker Square"
 	).connect("self_modulate_changed", self, "switch_earrings_color")
 	
+	for child in get_node(
+		"Menu Manager/Facial Hair Menu/Facial Hair Options"
+	).get_children():
+		child.connect("item_clicked", self, "switch_facial_hair")
+		
+	for child in get_node(
+		"Menu Manager/Facial Hair Menu/Facial Hair Color Options/Color Squares"
+	).get_children():
+		child.connect("item_clicked", self, "switch_facial_hair_color")
+		
+	get_node(
+		"Menu Manager/Facial Hair Menu/Facial Hair Color Options/Color Squares/Color Picker Square"
+	).connect("self_modulate_changed", self, "switch_facial_hair_color")
+	
 func switch_face(path):
 	var new_texture = get_node(path).texture
 	get_node("Character Stage/Features/Skin Features/Head").set_texture(
@@ -129,6 +149,9 @@ func switch_face(path):
 	get_node("Viewport/Character Stage/Features/Skin Features/Head").set_texture(
 		new_texture
 	)
+	current_face = get_node(path).name
+	if current_beard == "Short Beard Option":
+		switch_facial_hair("Menu Manager/Facial Hair Menu/Facial Hair Options/Short Beard Option")
 	
 func switch_skin_color(path):
 	var color = get_node(path).get_self_modulate()
@@ -148,7 +171,18 @@ func switch_nose(path):
 func switch_mouth(path):
 	var new_texture = get_node(path).texture
 	var color = get_node(path).get_self_modulate()
+	var name = get_node(path).name
+	var show_colors = false
 	get_node("Character Stage/Features/Mouth").set_texture(new_texture)
+	
+	if name in color_mouths:
+		show_colors = true
+		
+	get_node("Character Stage/Features/Mouth").set_self_modulate(color)
+	get_node("Menu Manager/Mouth Menu/Mouth Color Options").set_visible(show_colors)
+	
+func switch_mouth_color(path):
+	var color = get_node(path).get_self_modulate()
 	get_node("Character Stage/Features/Mouth").set_self_modulate(color)
 	
 func switch_eyebrows(path):
@@ -197,12 +231,19 @@ func switch_clothes_colors(path):
 	get_node("Character Stage/Features/Clothes").set_self_modulate(color)
 	
 func switch_head_accessories(path):
-	if get_node(path).name == "Clear Button":
+	var name = get_node(path).name
+	if name == "Clear Button":
 		get_node("Character Stage/Features/Head Accessory").hide()
 		return
 	var new_texture = get_node(path).texture
 	get_node("Character Stage/Features/Head Accessory").show()
 	get_node("Character Stage/Features/Head Accessory").set_texture(new_texture)
+	var show_colors = false
+	if name in color_head_accessories:
+		show_colors = true
+	else:
+		get_node("Character Stage/Features/Head Accessory").set_self_modulate(Color( 1, 1, 1, 1 ))
+	get_node("Menu Manager/Head Accessories Menu/Head Accessories Color Options").set_visible(show_colors)
 	
 func switch_head_accessories_colors(path):
 	var color = get_node(path).get_self_modulate()
@@ -243,6 +284,24 @@ func switch_earrings(path):
 func switch_earrings_color(path):
 	var color = get_node(path).get_self_modulate()
 	get_node("Character Stage/Features/Earrings").set_self_modulate(color)
+	
+func switch_facial_hair(path):
+	if get_node(path).name == "Clear Button":
+		get_node("Character Stage/Features/Facial Hair").hide()
+		current_beard = "None"
+		return
+
+	get_node("Character Stage/Features/Facial Hair").show()
+	current_beard = get_node(path).name
+	
+	if get_node(path).name == "Short Beard Option":
+		path = "Menu Manager/Facial Hair Menu/Facial Hair Options/Short Beard Options/" + current_face
+	var new_texture = get_node(path).texture
+	get_node("Character Stage/Features/Facial Hair").set_texture(new_texture)
+	
+func switch_facial_hair_color(path):
+	var color = get_node(path).get_self_modulate()
+	get_node("Character Stage/Features/Facial Hair").set_self_modulate(color)
 	
 func export_image(path):
 	print("exporting image")
