@@ -22,9 +22,17 @@ func _ready():
 	get_node("Right Arrow").connect("item_clicked", self, "move_right")
 
 func drag_sticker(path):
-	var new_texture = get_node(path).get_texture()
+	var chosen_sticker = get_node(path)
+	var collision_position = chosen_sticker.get_child(0).get_child(0).get_position()
+	var collision_scale = chosen_sticker.get_child(0).get_child(0).get_scale()
+	var scale = chosen_sticker.get_global_scale()
+	var new_texture = chosen_sticker.get_texture()
 	var cursor = get_node("Drag Sticker")
-	cursor.set_texture(new_texture)
+	#cursor.get_child(0).get_child(0).set_position(collision_position)
+	#cursor.get_child(0).get_child(0).set_scale(collision_scale)
+	#cursor.set_texture(new_texture)
+	#cursor.set_global_scale(scale)
+	chosen_sticker.copy(cursor)
 	cursor.show()
 	
 func drop_sticker(path):

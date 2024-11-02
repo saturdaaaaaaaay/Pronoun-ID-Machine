@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/UI Elements/Scripts/ClickableItem.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/Sticker.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI Elements/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/UI Elements/Stickers/Bisexual Pride Sticker.png" type="Texture" id=3]
 

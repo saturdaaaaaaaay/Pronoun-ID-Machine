@@ -6,7 +6,6 @@ extends Node2D
 # var b = "text"
 var non_color_backgrounds = ["Clocktower Colored Background Option"]
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for child in get_node("Tabs").get_children():
@@ -36,9 +35,9 @@ func switch_tabs(path):
 	inactive_tab.set_self_modulate(Color(0.956863, 0.396078, 0.141176))
 	
 func attach_sticker(path):
-	var sticker = preload("res://Scenes/UI Elements/Menus/PlacedSticker.tscn").instance()
-	var texture = get_node(path).get_texture()
+	var chosen_sticker = get_node(path)
 	var position = get_viewport().get_mouse_position()
+	
 	var margin = get_node("MarginContainer")
 	var margin_left = margin.margin_left
 	var margin_right = margin.margin_right
@@ -46,11 +45,15 @@ func attach_sticker(path):
 	var margin_bottom = margin.margin_bottom
 	var mouse_x = position.x > margin_left and position.x < margin_right
 	var mouse_y = position.y > margin_top and position.y < margin_bottom
+	
 	if mouse_x and mouse_y:
+		var sticker = preload(
+			"res://Scenes/UI Elements/Menus/PlacedSticker.tscn"
+		).instance()
 		get_node("ID Badge/Stickers").add_child(sticker)
-		sticker.set_texture(texture)
+
+		chosen_sticker.copy(sticker)
 		sticker.set_global_position(position)
-		sticker.set_global_scale(Vector2(.5, .5))
 		sticker.connect("item_clicked", self, "move_sticker")
 		
 func move_sticker(path):

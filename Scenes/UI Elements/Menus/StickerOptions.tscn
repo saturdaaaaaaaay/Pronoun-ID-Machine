@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/Menus/StickerOption.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/UI Elements/Stickers/Non-binary Pride Sticker.png" type="Texture" id=2]
@@ -24,6 +24,9 @@
 [ext_resource path="res://images/UI Elements/Stickers/Dino Head Sticker.png" type="Texture" id=22]
 [ext_resource path="res://images/UI Elements/Stickers/BHS Sticker.png" type="Texture" id=23]
 [ext_resource path="res://images/UI Elements/Stickers/Cakey Cat Sticker.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/UI Elements/Menus/DVDStickerOption.tscn" type="PackedScene" id=25]
+[ext_resource path="res://images/UI Elements/Stickers/Orange Squiggly Sticker.PNG" type="Texture" id=26]
+[ext_resource path="res://Scenes/UI Elements/Menus/WelcomeToDWAStickerOption.tscn" type="PackedScene" id=27]
 
 [node name="Sticker Options" type="Node2D"]
 position = Vector2( -1, 0 )
@@ -128,3 +131,16 @@ texture = ExtResource( 21 )
 visible = false
 position = Vector2( 750, 100 )
 texture = ExtResource( 23 )
+
+[node name="Orange Squiggly Sticker Option" parent="Bigger Stickers" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 850, 100 )
+texture = ExtResource( 26 )
+
+[node name="Bee Movie DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 950, 100 )
+
+[node name="Welcome to DWA Sticker Option" parent="Bigger Stickers" instance=ExtResource( 27 )]
+visible = false
+position = Vector2( 1050, 100 )
