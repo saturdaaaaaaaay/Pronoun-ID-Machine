@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/UI Elements/NahButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/UI Elements/YepButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI Elements/Buttons/NahButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Buttons/YepButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/UI Elements/Hmm... Button.png" type="Texture" id=3]
 [ext_resource path="res://images/UI Elements/ID Complete Confirmation.png" type="Texture" id=4]
 [ext_resource path="res://images/UI Elements/Yeah! Button.png" type="Texture" id=5]

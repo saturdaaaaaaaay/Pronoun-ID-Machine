@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/ColorPickerButton.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/Faces/SkinColorOptions.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/UI Elements/Color Options/ColorSquare.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI Elements/Color Options/ColorPickerSquare.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI Elements/Color Options/ColorPicker.tscn" type="PackedScene" id=5]
+
+[node name="Background Color Options" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Color Squares" type="Node2D" parent="."]
+
+[node name="Color Square 1" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0.443137, 0.380392, 1 )
+
+[node name="Color Square 2" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 0.0509804, 0.407843, 0, 1 )
+position = Vector2( 45, 0 )
+
+[node name="Color Square 3" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.843137, 0, 1 )
+position = Vector2( 90, 0 )
+
+[node name="Color Square 4" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 135, 0 )
+
+[node name="Color Square 5" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 180, 0 )
+
+[node name="Color Square 6" parent="Color Squares" instance=ExtResource( 3 )]
+self_modulate = Color( 0.568627, 0, 1, 1 )
+position = Vector2( 225, 0 )
+
+[node name="Color Picker Square" parent="Color Squares" instance=ExtResource( 4 )]
+position = Vector2( 270, 0 )
+
+[node name="ColorPickerOld" type="ColorPicker" parent="."]
+visible = false
+margin_left = 481.0
+margin_top = 178.0
+margin_right = 789.0
+margin_bottom = 590.0
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
+
+[node name="ColorPicker" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+visible = false
+margin_left = 213.0
+margin_top = 105.0
+margin_right = 256.0
+margin_bottom = 125.0
+color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )

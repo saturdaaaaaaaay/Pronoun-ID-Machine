@@ -7,9 +7,9 @@
 [ext_resource path="res://Scenes/UI Elements/Pages/IDCompleteConfirmation.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/UI Elements/Pages/FinalPage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI Elements/Pages/FillOutInfo.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/UI Elements/Menus/Clouds.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/UI Elements/Menus/Halloween.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/UI Elements/Menus/Switch.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI Elements/Menus/Themes/Clouds.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI Elements/Menus/Themes/Halloween.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/UI Elements/Menus/Themes/Switch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/main.gd" type="Script" id=16]
 
 [node name="main" type="Node2D"]

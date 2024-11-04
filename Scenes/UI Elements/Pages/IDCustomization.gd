@@ -48,7 +48,7 @@ func attach_sticker(path):
 	
 	if mouse_x and mouse_y:
 		var sticker = preload(
-			"res://Scenes/UI Elements/Menus/PlacedSticker.tscn"
+			"res://Scenes/UI Elements/Menus/Stickers/PlacedSticker.tscn"
 		).instance()
 		get_node("ID Badge/Stickers").add_child(sticker)
 

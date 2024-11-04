@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/ClickableItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Menus/Hair/HairOption.gd" type="Script" id=2]
+[ext_resource path="res://images/Character Features/Hair/Hair Back 12.PNG" type="Texture" id=3]
+[ext_resource path="res://images/Character Features/Hair/Hair Front 12.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 245.714, 266.873 )
+
+[node name="Hair 12 Option" instance=ExtResource( 1 )]
+position = Vector2( -25, -89 )
+scale = Vector2( 0.175, 0.175 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Hair Front Option" type="Sprite" parent="." index="0"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 491.428, 792.587 )
+shape = SubResource( 1 )

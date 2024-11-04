@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scenes/UI Elements/ContinueButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Buttons/ContinueButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI Elements/Pages/FillOutInfo.gd" type="Script" id=2]
 [ext_resource path="res://images/UI Elements/Fill Out Info Panel.png" type="Texture" id=3]
 [ext_resource path="res://images/UI Elements/That's me!.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/UI Elements/BackButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI Elements/Buttons/BackButton.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Theme" id=1]
 
@@ -24,7 +24,6 @@ margin_left = 420.0
 margin_top = 370.0
 margin_right = 1015.0
 margin_bottom = 415.0
-custom_colors/background_color = Color( 1, 1, 1, 1 )
 fold_gutter = true
 
 [node name="Pronouns" type="TextEdit" parent="."]

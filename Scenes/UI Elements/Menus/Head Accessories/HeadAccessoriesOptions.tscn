@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/Head Accessories/HeadAccessoriesOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/Character Features/Head Accessories/Gabby Ears.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI Elements/Buttons/ClearButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/Character Features/Head Accessories/Baseball Cap.png" type="Texture" id=4]
+
+[node name="Head Accessories Options" type="Node2D"]
+
+[node name="Shrek Ears Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 90, -205 )
+
+[node name="Gabby Ears Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( -90, -105 )
+texture = ExtResource( 2 )
+
+[node name="Baseball Cap Option" parent="." instance=ExtResource( 1 )]
+position = Vector2( 90, -105 )
+texture = ExtResource( 4 )
+
+[node name="Clear Button" parent="." instance=ExtResource( 3 )]
+position = Vector2( 50, 0 )

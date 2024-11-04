@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI Elements/Menus/Glasses/GlassesOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Buttons/ClearButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/Character Features/Face Accessories/Glasses 2.png" type="Texture" id=4]
+
+[node name="Glasses Options" type="Node2D"]
+
+[node name="Clear Button" parent="." instance=ExtResource( 3 )]
+position = Vector2( 50, 0 )
+
+[node name="Glasses 1 Option" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 75, -250 )
+
+[node name="Glasses 2 Option" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -80, -150 )
+texture = ExtResource( 4 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Scenes/UI Elements/LeftArrow.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI Elements/Buttons/LeftArrow.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/UI Elements/Character Customization Page.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/EyebrowsOptionTab.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/HairOptionTab.tscn" type="PackedScene" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/FaceOptionTab.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/MouthOptionTab.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/EyesOptionTab.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/UI Elements/RightArrow.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI Elements/Buttons/RightArrow.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/OptionTabs.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/HeadAccessoriesOptionTab.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/UI Elements/Option Tabs/FaceAccessoriesOptionTab.tscn" type="PackedScene" id=13]

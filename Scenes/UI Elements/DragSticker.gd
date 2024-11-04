@@ -1,4 +1,4 @@
-extends "res://Scenes/UI Elements/Menus/Sticker.gd"
+extends "res://Scenes/UI Elements/Menus/Stickers/Sticker.gd"
 
 
 # Declare member variables here. Examples:
