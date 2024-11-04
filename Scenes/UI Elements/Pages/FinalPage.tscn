@@ -50,7 +50,6 @@ render_target_update_mode = 3
 [node name="ID Badge" type="Node2D" parent="Viewport"]
 visible = false
 position = Vector2( 200, -10 )
-scale = Vector2( 1.25, 1.25 )
 
 [node name="Badge Format" type="Sprite" parent="Viewport/ID Badge"]
 visible = false

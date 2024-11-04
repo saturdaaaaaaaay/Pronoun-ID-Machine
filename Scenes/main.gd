@@ -78,9 +78,9 @@ func show_id_customization(path):
 	get_node("ID Customization").show()
 	
 	var pronouns = get_node("Fill Out Info/Pronouns").get_text()
-	get_node("ID Customization/ID Badge/Pronouns").set_text(pronouns)
+	get_node("ID Customization/ID Badge/ID Text/Pronouns").set_text(pronouns)
 	var name = get_node("Fill Out Info/Name").get_text()
-	get_node("ID Customization/ID Badge/Name").set_text(name)
+	get_node("ID Customization/ID Badge/ID Text/Name").set_text(name)
 	get_node("Character Customization/Character Stage/Background").hide()
 	var character_stage = get_node("Character Customization/Character Stage")
 	var character_stage_duplicate = character_stage.duplicate()
@@ -114,8 +114,7 @@ func show_final_page(path):
 		if child.name == "Character Stage":
 			child.get_child(0).toggle_blink(false)
 	
-	ID.set_scale(Vector2(1.5, 1.5))
-	ID.set_position(Vector2(325, 40))
+	ID.set_position(Vector2(300, -40))
 
 	for child in get_node("Final Page").get_children():
 		if "ID Badge" in child.name:
