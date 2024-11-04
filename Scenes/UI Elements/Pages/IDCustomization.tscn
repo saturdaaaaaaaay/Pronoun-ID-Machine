@@ -29,20 +29,16 @@ script = ExtResource( 2 )
 
 [node name="Stickers Tab" parent="Tabs" instance=ExtResource( 11 )]
 self_modulate = Color( 1, 0.682353, 0.533333, 1 )
-scale = Vector2( 1.35, 1.35 )
 
 [node name="Backgrounds Tab" parent="Tabs" instance=ExtResource( 4 )]
 self_modulate = Color( 0.956863, 0.396078, 0.141176, 1 )
-scale = Vector2( 1.35, 1.35 )
 
 [node name="Sticker Panel" type="Sprite" parent="."]
-scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="Backgrounds Panel" type="Sprite" parent="."]
 visible = false
-scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -76,7 +72,6 @@ margin_right = 524.0
 margin_bottom = 287.0
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 2 )
-text = "Elie"
 
 [node name="Pronouns" type="RichTextLabel" parent="ID Badge/ID Text"]
 margin_left = 313.0
@@ -85,7 +80,6 @@ margin_right = 520.0
 margin_bottom = 329.0
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 1 )
-text = "they/them"
 
 [node name="Sticker Menu" parent="." instance=ExtResource( 12 )]
 

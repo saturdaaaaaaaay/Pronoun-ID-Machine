@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/UI Elements/Scripts/ClickableItem.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50.5, 50.5 )
+extents = Vector2( 48.5, 49.5 )
 
 [node name="Face Option Tab" instance=ExtResource( 3 )]
 self_modulate = Color( 0.956863, 0.396078, 0.141176, 1 )

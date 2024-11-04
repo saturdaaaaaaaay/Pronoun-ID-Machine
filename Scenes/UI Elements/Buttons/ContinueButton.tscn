@@ -4,14 +4,14 @@
 [ext_resource path="res://Scenes/UI Elements/Scripts/ClickableItem.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 97, 56.5 )
+extents = Vector2( 121.5, 71 )
 
 [node name="Continue Button" instance=ExtResource( 1 )]
-scale = Vector2( 1.35, 1.35 )
+scale = Vector2( 1, 1 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2( 754, 453.5 )
+position = Vector2( 1024.5, 614 )
 shape = SubResource( 1 )

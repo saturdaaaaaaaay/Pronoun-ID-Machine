@@ -5,15 +5,14 @@
 [ext_resource path="res://images/UI Elements/Yep! Button.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 74, 42 )
+extents = Vector2( 90, 51 )
 
 [node name="Yep Button" instance=ExtResource( 1 )]
-scale = Vector2( 1.35, 1.35 )
 texture = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2( 608, 366 )
+position = Vector2( 824, 497 )
 shape = SubResource( 1 )
