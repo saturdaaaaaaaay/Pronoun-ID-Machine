@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/UI Elements/Menus/Stickers/StickerOption.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/UI Elements/Stickers/Non-binary Pride Sticker.png" type="Texture" id=2]
@@ -27,6 +27,9 @@
 [ext_resource path="res://Scenes/UI Elements/Menus/Stickers/DVDStickerOption.tscn" type="PackedScene" id=25]
 [ext_resource path="res://images/UI Elements/Stickers/Orange Squiggly Sticker.PNG" type="Texture" id=26]
 [ext_resource path="res://Scenes/UI Elements/Menus/Stickers/WelcomeToDWAStickerOption.tscn" type="PackedScene" id=27]
+[ext_resource path="res://images/UI Elements/Stickers/The Mighty Ones DVD Sticker.PNG" type="Texture" id=28]
+[ext_resource path="res://images/UI Elements/Stickers/The Bad Guys DVD Sticker.PNG" type="Texture" id=29]
+[ext_resource path="res://images/UI Elements/Stickers/Shrek DVD Sticker.PNG" type="Texture" id=30]
 
 [node name="Sticker Options" type="Node2D"]
 position = Vector2( -1, 0 )
@@ -137,10 +140,25 @@ visible = false
 position = Vector2( 850, 100 )
 texture = ExtResource( 26 )
 
-[node name="Bee Movie DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
+[node name="Welcome to DWA Sticker Option" parent="Bigger Stickers" instance=ExtResource( 27 )]
 visible = false
 position = Vector2( 950, 100 )
 
-[node name="Welcome to DWA Sticker Option" parent="Bigger Stickers" instance=ExtResource( 27 )]
+[node name="Shrek DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
 visible = false
 position = Vector2( 1050, 100 )
+texture = ExtResource( 30 )
+
+[node name="Bee Movie DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 1150, 100 )
+
+[node name="The Bad Guys DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 1250, 100 )
+texture = ExtResource( 29 )
+
+[node name="The Mighty Ones DVD Sticker Option" parent="Bigger Stickers" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 1350, 100 )
+texture = ExtResource( 28 )

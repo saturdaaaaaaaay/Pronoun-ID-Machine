@@ -20,10 +20,10 @@ position = Vector2( 113.514, 135.135 )
 shape = SubResource( 1 )
 
 [node name="Popup" type="Popup" parent="." index="1"]
-margin_left = 264.0
-margin_top = 96.0
-margin_right = 580.0
-margin_bottom = 516.0
+margin_left = 700.0
+margin_top = 200.0
+margin_right = 1016.0
+margin_bottom = 620.0
 
 [node name="Node2D" type="Node2D" parent="Popup" index="0"]
 z_index = 2
@@ -34,10 +34,10 @@ scale = Vector2( 0.9, 0.75 )
 texture = ExtResource( 4 )
 
 [node name="ColorPicker" type="ColorPicker" parent="Popup/Node2D" index="1"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 324.0
-margin_bottom = 478.0
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 313.0
+margin_bottom = 472.0
 edit_alpha = false
 deferred_mode = true
 presets_enabled = false
